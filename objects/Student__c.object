@@ -154,6 +154,24 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Fee_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount Fee Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>Department_Name__c</fullName>
         <externalId>false</externalId>
         <label>Department Name</label>
@@ -164,12 +182,40 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Father_s_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Father&apos;s Name</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hosteller__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hosteller?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Lateral_Entry__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Lateral Entry</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mother_s_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Mother&apos;s Name</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Roll_Number__c</fullName>
