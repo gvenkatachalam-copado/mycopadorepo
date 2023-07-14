@@ -3,10 +3,20 @@
     <types>
         <members>Student__c.Address__c</members>
         <members>Student__c.Amount_Fee_Paid__c</members>
+        <members>Student__c.Department_Name__c</members>
         <members>Student__c.Father_s_Name__c</members>
         <members>Student__c.Hosteller__c</members>
+        <members>Student__c.Lateral_Entry__c</members>
         <members>Student__c.Mother_s_Name__c</members>
+        <members>Student__c.Roll_Number__c</members>
+        <members>Student__c.Semester__c</members>
+        <members>Student__c.Student_Contact_Number__c</members>
+        <members>Student__c.Student_Email__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>Student__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>Student__c-Student Layout</members>
@@ -14,7 +24,8 @@
     </types>
     <types>
         <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
         <name>Profile</name>
     </types>
-    <version>57.0</version>
+    <version>58.0</version>
 </Package>
