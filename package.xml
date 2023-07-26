@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Student__c.Department_Name__c</members>
-        <members>Student__c.Lateral_Entry__c</members>
-        <members>Student__c.Roll_Number__c</members>
-        <members>Student__c.Semester__c</members>
-        <members>Student__c.Student_Contact_Number__c</members>
-        <members>Student__c.Student_Email__c</members>
-        <name>CustomField</name>
+        <members>Salesforce_CLI</members>
+        <name>ConnectedApp</name>
     </types>
     <types>
-        <members>Student__c</members>
-        <name>CustomObject</name>
+        <members>Connected_App</members>
+        <name>PermissionSet</name>
     </types>
     <types>
-        <members>Student__c-Student Layout</members>
-        <name>Layout</name>
+        <members>Connected App Assignments</members>
+        <name>Profile</name>
     </types>
-    <version>57.0</version>
+    <version>58.0</version>
 </Package>
