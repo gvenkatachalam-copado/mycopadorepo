@@ -226,7 +226,7 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AccountNumber</fullName>
@@ -235,6 +235,7 @@
     <fields>
         <fullName>AccountSource</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -337,6 +338,7 @@
     <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>NumberOfEmployees</fullName>
@@ -361,6 +363,7 @@
     <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
