@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.AccountSource</members>
-        <members>Account.Name</members>
-        <members>Account.OwnerId</members>
-        <name>CustomField</name>
+        <members>PT1_profilePasswordPolicy1691092044718</members>
+        <name>ProfilePasswordPolicy</name>
     </types>
     <types>
-        <members>Account</members>
-        <name>CustomObject</name>
+        <members>PT1_profileSessionSetting1691092044839</members>
+        <name>ProfileSessionSetting</name>
     </types>
     <version>58.0</version>
 </Package>
