@@ -4,9 +4,5 @@
         <members>Connected App Assignments</members>
         <name>Profile</name>
     </types>
-    <types>
-        <members>Connected_App_Assignments_profilePasswordPolicy1690325345201</members>
-        <name>ProfilePasswordPolicy</name>
-    </types>
     <version>58.0</version>
 </Package>
