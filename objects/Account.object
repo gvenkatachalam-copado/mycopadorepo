@@ -238,6 +238,18 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Account_Translation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>It is used for the account translation testing feature</inlineHelpText>
+        <label>Account Translation</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Active__c</fullName>
         <externalId>false</externalId>
         <label>Active</label>
