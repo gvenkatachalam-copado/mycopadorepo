@@ -239,6 +239,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Account_Task_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Task Description</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Account_Translation__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>It is used for the account translation testing feature</inlineHelpText>
@@ -284,6 +295,16 @@
     <fields>
         <fullName>CleanStatus</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Create_a_New_Translated_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Create a New Translated Account</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>CustomerPriority__c</fullName>
