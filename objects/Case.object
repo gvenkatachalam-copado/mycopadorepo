@@ -212,6 +212,10 @@
             <default>true</default>
         </values>
         <values>
+            <fullName>New Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Waiting on Project</fullName>
             <default>false</default>
         </values>
@@ -584,6 +588,8 @@
         </filters>
         <label>My Open Cases</label>
     </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
     <recordTypes>
         <fullName>Service</fullName>
         <active>true</active>
