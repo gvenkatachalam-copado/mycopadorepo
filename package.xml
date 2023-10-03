@@ -4,5 +4,9 @@
         <members>Case.Status</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>Case.Service</members>
+        <name>RecordType</name>
+    </types>
     <version>58.0</version>
 </Package>
