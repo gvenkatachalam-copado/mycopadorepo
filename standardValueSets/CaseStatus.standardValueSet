@@ -25,4 +25,16 @@
         <label>Closed</label>
         <closed>true</closed>
     </standardValue>
+    <standardValue>
+        <fullName>Waiting on Project</fullName>
+        <default>false</default>
+        <label>Waiting on Project</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Service</fullName>
+        <default>false</default>
+        <label>New Service</label>
+        <closed>false</closed>
+    </standardValue>
 </StandardValueSet>
