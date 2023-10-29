@@ -73,71 +73,31 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>standard__DataManager</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__RevenueCloudConsole</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningScheduler</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>standard__LightningBolt</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado</name>
+        <name>omnistudio__Vlocity_Digital_Studio</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado_Branch_Management</name>
+        <name>OmniStudio_Console</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado_Change_Management</name>
+        <name>standard__DataManager</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado_Compliance_Hub</name>
+        <name>standard__ExpressionSetConsole</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado_Permissioner</name>
+        <name>OmniStudioConsoleHOWs</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copado__Copado_Plan</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Selenium_Testing</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__CopadoTests</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Branch_Management_Lightning</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Change_Management_Lightning</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Console</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Lightning</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>copado__Copado_Plan_Lightning</name>
+        <name>standard__LightningScheduler</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

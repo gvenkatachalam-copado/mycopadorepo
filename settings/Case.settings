@@ -9,11 +9,11 @@
     </caseFeedItemSettings>
     <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
     <caseMergeInLightning>false</caseMergeInLightning>
-    <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
     <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
-    <defaultCaseOwner>gvenkatachalam@copado.com.prod</defaultCaseOwner>
+    <defaultCaseOwner>gvenkatachalam@copado.com.omnistudio.uat</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>gvenkatachalam@copado.com.prod</defaultCaseUser>
+    <defaultCaseUser>gvenkatachalam@copado.com.omnistudio.uat</defaultCaseUser>
     <emailToCase>
         <enableEmailToCase>false</enableEmailToCase>
     </emailToCase>
@@ -30,11 +30,14 @@
     <enableSolutionShortSummary>true</enableSolutionShortSummary>
     <enableSuggestedSolutions>true</enableSuggestedSolutions>
     <escalateCaseBefore>false</escalateCaseBefore>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
     <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
     <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
     <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
     <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
     <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>false</showFewerCloseActions>
+    <systemUserEmail>noreply@00d5g00000klbp8eap</systemUserEmail>
     <useSystemEmailAddress>true</useSystemEmailAddress>
     <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
     <visibleInCssCheckbox>false</visibleInCssCheckbox>
