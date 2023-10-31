@@ -4,9 +4,6 @@
         <field>GroupMember-QueuePublicGroupMembership$Group</field>
     </columns>
     <columns>
-        <field>GroupMember-QueuePublicGroupMembership$Id</field>
-    </columns>
-    <columns>
         <field>GroupMember-QueuePublicGroupMembership$GroupMember-Group</field>
     </columns>
     <columns>
