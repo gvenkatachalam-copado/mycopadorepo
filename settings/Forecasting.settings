@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ForecastingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultToPersonalCurrency>false</defaultToPersonalCurrency>
-    <enableForecasts>false</enableForecasts>
+    <enableForecasts>true</enableForecasts>
     <forecastingCategoryMappings>
         <forecastingItemCategoryApiName>commitonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
@@ -184,6 +184,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -208,6 +212,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -220,24 +228,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -264,20 +440,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -386,6 +606,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -410,6 +634,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -422,24 +650,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -466,20 +862,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -508,8 +948,8 @@
             <label>Account Name</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SPLITAMOUNT</field>
-            <label>Forecasted Amount</label>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Amount</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSE_DATE</field>
@@ -538,10 +978,6 @@
         <opportunityListFieldsLabelMappings>
             <field>CONTRACT.NAME</field>
             <label>Contract Name</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>OPPORTUNITY.AMOUNT</field>
-            <label>Amount</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>CORE.USERS.ALIAS</field>
@@ -592,6 +1028,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -616,6 +1056,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -628,29 +1072,201 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>SPLITAMOUNT</field>
+            <label>Forecasted Amount</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
             <field>ACCOUNT.NAME</field>
-            <field>SPLITAMOUNT</field>
+            <field>OPPORTUNITY.AMOUNT</field>
             <field>OPPORTUNITY.CLOSE_DATE</field>
             <field>OPPORTUNITY.STAGE_NAME</field>
             <field>OPPORTUNITY.PROBABILITY</field>
@@ -660,7 +1276,6 @@
         <opportunityListFieldsUnselectedSettings>
             <field>CONTRACT.CONTRACT_NUMBER</field>
             <field>CONTRACT.NAME</field>
-            <field>OPPORTUNITY.AMOUNT</field>
             <field>CORE.USERS.ALIAS</field>
             <field>CORE.USERS.FIRST_NAME</field>
             <field>CORE.USERS.LAST_NAME</field>
@@ -673,20 +1288,65 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>SPLITAMOUNT</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -795,6 +1455,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -819,6 +1483,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -831,24 +1499,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -875,20 +1711,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1001,6 +1881,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1025,6 +1909,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -1037,24 +1925,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1082,20 +2138,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1204,6 +2304,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1228,6 +2332,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -1240,24 +2348,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1284,20 +2560,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1410,6 +2730,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1434,6 +2758,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -1446,24 +2774,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1491,20 +2987,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1613,6 +3153,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1637,6 +3181,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -1649,24 +3197,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1693,20 +3409,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1722,7 +3482,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>false</hasProductFamily>
         <isAmount>true</isAmount>
-        <isAvailable>false</isAvailable>
+        <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
         <masterLabel>Opportunity Revenue Schedule Date</masterLabel>
         <name>OpportunityRevenueScheduleDate</name>
@@ -1819,6 +3579,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1843,6 +3607,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -1855,24 +3623,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1900,20 +3836,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1929,7 +3909,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>false</hasProductFamily>
         <isAmount>false</isAmount>
-        <isAvailable>false</isAvailable>
+        <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
         <masterLabel>Opportunity Quantity Schedule Date</masterLabel>
         <name>OpportunityQuantityScheduleDate</name>
@@ -2022,6 +4002,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2046,6 +4030,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -2058,24 +4046,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2102,20 +4258,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -2131,7 +4331,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>true</hasProductFamily>
         <isAmount>true</isAmount>
-        <isAvailable>false</isAvailable>
+        <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
         <masterLabel>Line Item Revenue Schedule Date</masterLabel>
         <name>LineItemRevenueScheduleDate</name>
@@ -2228,6 +4428,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2252,6 +4456,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -2264,24 +4472,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2309,20 +4685,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -2338,7 +4758,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>true</hasProductFamily>
         <isAmount>false</isAmount>
-        <isAvailable>false</isAvailable>
+        <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
         <masterLabel>Line Item Quantity Schedule Date</masterLabel>
         <name>LineItemQuantityScheduleDate</name>
@@ -2431,6 +4851,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2455,6 +4879,10 @@
             <label>Fiscal Period</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Opportunity Record Type</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <label>Last Activity</label>
         </opportunityListFieldsLabelMappings>
@@ -2467,24 +4895,192 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDx</field>
-            <label>Current Generator(s)</label>
+            <field>00NHr00000L5Qrh</field>
+            <label>Account Record Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDy</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NHr00000L5Qri</field>
+            <label>Account SLA</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXDz</field>
-            <label>Main Competitor(s)</label>
+            <field>00NHr00000L5RiZ</field>
+            <label>Async Job</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE0</field>
+            <field>00NHr00000L5Ria</field>
+            <label>Async Operation</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXR</field>
+            <label>Budget Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF0</field>
+            <label>Default Currency Payment Mode</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD2</field>
+            <label>Effective One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrj</field>
+            <label>Effective Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD3</field>
+            <label>Effective Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXS</field>
+            <label>Effective Total: Base One Time Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RXT</field>
+            <label>Effective Total: Base Recurring Charges</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSi</field>
+            <label>Effective Total: One Time Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF1</field>
+            <label>Effective Total: One Time Loyalty</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSj</field>
+            <label>Effective Total: Recurring Costs</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrk</field>
+            <label>Email</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrl</field>
+            <label>Fax</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrm</field>
+            <label>Follow Up To</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrn</field>
+            <label>Frame Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Rib</field>
+            <label>Locked By User</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Ric</field>
+            <label>Locked For</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrp</field>
+            <label>Number Of Contracted Months</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RF2</field>
+            <label>One Time Loyalty Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSk</field>
+            <label>One Time Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD4</field>
+            <label>One Time Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSl</field>
+            <label>Opportunity Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrq</field>
+            <label>Opportunity Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrr</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrs</field>
+            <label>Originating Channel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrt</field>
+            <label>Originating Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrv</field>
+            <label>Phone</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrw</field>
+            <label>Price List</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RSm</field>
+            <label>Recurring Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RD5</field>
+            <label>Recurring Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qru</field>
+            <label>Referral Source</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qro</field>
+            <label>Require Contract</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrx</field>
+            <label>Shipping Postal Code</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qry</field>
+            <label>Shipping State</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qrz</field>
             <label>Tracking Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5ROz</field>
+            <label>Usage Cost Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP1</field>
+            <label>Usage Margin Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5RP0</field>
+            <label>Usage Price Total</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs0</field>
+            <label>Validation Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs1</field>
+            <label>Validation Message</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NHr00000L5Qs2</field>
+            <label>Validation Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>PARTNER.NAME</field>
+            <label>Partner Account</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <label>Last Stage Change Date</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
+            <label>Push Count</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2511,20 +5107,64 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
             <field>OPPORTUNITY.FISCAL_YEAR</field>
             <field>OPPORTUNITY.FISCAL_QUARTER</field>
             <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N5i00000MQXDx</field>
-            <field>00N5i00000MQXDy</field>
-            <field>00N5i00000MQXDz</field>
-            <field>00N5i00000MQXE0</field>
-            <field>00N5i00000MQXE1</field>
+            <field>00NHr00000L5Qrh</field>
+            <field>00NHr00000L5Qri</field>
+            <field>00NHr00000L5RiZ</field>
+            <field>00NHr00000L5Ria</field>
+            <field>00NHr00000L5RXR</field>
+            <field>00NHr00000L5RF0</field>
+            <field>00NHr00000L5RD2</field>
+            <field>00NHr00000L5Qrj</field>
+            <field>00NHr00000L5RD3</field>
+            <field>00NHr00000L5RXS</field>
+            <field>00NHr00000L5RXT</field>
+            <field>00NHr00000L5RSi</field>
+            <field>00NHr00000L5RF1</field>
+            <field>00NHr00000L5RSj</field>
+            <field>00NHr00000L5Qrk</field>
+            <field>00NHr00000L5Qrl</field>
+            <field>00NHr00000L5Qrm</field>
+            <field>00NHr00000L5Qrn</field>
+            <field>00NHr00000L5Rib</field>
+            <field>00NHr00000L5Ric</field>
+            <field>00NHr00000L5Qrp</field>
+            <field>00NHr00000L5RF2</field>
+            <field>00NHr00000L5RSk</field>
+            <field>00NHr00000L5RD4</field>
+            <field>00NHr00000L5RSl</field>
+            <field>00NHr00000L5Qrq</field>
+            <field>00NHr00000L5Qrr</field>
+            <field>00NHr00000L5Qrs</field>
+            <field>00NHr00000L5Qrt</field>
+            <field>00NHr00000L5Qrv</field>
+            <field>00NHr00000L5Qrw</field>
+            <field>00NHr00000L5RSm</field>
+            <field>00NHr00000L5RD5</field>
+            <field>00NHr00000L5Qru</field>
+            <field>00NHr00000L5Qro</field>
+            <field>00NHr00000L5Qrx</field>
+            <field>00NHr00000L5Qry</field>
+            <field>00NHr00000L5Qrz</field>
+            <field>00NHr00000L5ROz</field>
+            <field>00NHr00000L5RP1</field>
+            <field>00NHr00000L5RP0</field>
+            <field>00NHr00000L5Qs0</field>
+            <field>00NHr00000L5Qs1</field>
+            <field>00NHr00000L5Qs2</field>
+            <field>PARTNER.NAME</field>
+            <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+            <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <globalAdjustmentsSettings>
