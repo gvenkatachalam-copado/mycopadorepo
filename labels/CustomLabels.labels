@@ -7,4 +7,11 @@
         <shortDescription>Caseclose</shortDescription>
         <value>Caseclose</value>
     </labels>
+    <labels>
+        <fullName>label_2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label 2</shortDescription>
+        <value>fgds</value>
+    </labels>
 </CustomLabels>

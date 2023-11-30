@@ -4,4 +4,8 @@
         <label>German</label>
         <name>Caseclose</name>
     </customLabels>
+    <customLabels>
+        <label>ffvvs</label>
+        <name>label_2</name>
+    </customLabels>
 </Translations>
