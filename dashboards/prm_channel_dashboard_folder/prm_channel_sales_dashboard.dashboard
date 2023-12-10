@@ -20,12 +20,12 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
-                <report>prm_channel_sales_reports_folder/prm_open_opportunity_by_stage</report>
+                <report>prm_channel_sales_reports_folder/prm_open_opportunity_by_partner</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Open Opportunities by Stage</title>
+                <title>Open Opportunities by Partner</title>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -43,12 +43,12 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
-                <report>prm_channel_sales_reports_folder/prm_open_opportunity_by_partner</report>
+                <report>prm_channel_sales_reports_folder/prm_open_opportunity_by_stage</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Open Opportunities by Partner</title>
+                <title>Open Opportunities by Stage</title>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -66,12 +66,12 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
-                <report>prm_channel_sales_reports_folder/prm_lead_conversion</report>
+                <report>prm_channel_sales_reports_folder/prm_revenue_closed</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Lead conversion rate</title>
+                <title>Revenue Closed by Quarter</title>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -89,12 +89,12 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
-                <report>prm_channel_sales_reports_folder/prm_revenue_closed</report>
+                <report>prm_channel_sales_reports_folder/prm_lead_conversion</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Revenue Closed by Quarter</title>
+                <title>Lead conversion rate</title>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -157,7 +157,7 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>Key metrics on partner sales performance.</description>
     <isGridLayout>true</isGridLayout>
-    <runningUser>gvenkatachalam-0206034924@industryapps.edu</runningUser>
+    <runningUser>gvenkatachalam-4037121265@industryapps.edu</runningUser>
     <textColor>#000000</textColor>
     <title>Channel Sales</title>
     <titleColor>#000000</titleColor>

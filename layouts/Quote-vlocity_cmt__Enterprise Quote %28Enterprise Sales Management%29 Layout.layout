@@ -169,16 +169,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>vlocity_cmt__TelcoPDF</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>25</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>vlocity_cmt__GenerateProposal</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>26</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>vlocity_cmt__Configure_Enterprise_Quote</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>0</sortOrder>
@@ -232,6 +222,16 @@
             <actionName>vlocity_cmt__SavePDF</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>24</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>vlocity_cmt__TelcoPDF</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>25</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>vlocity_cmt__GenerateProposal</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>26</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

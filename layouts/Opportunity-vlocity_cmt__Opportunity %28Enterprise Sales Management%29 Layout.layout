@@ -236,6 +236,21 @@
             <sortOrder>24</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>PrintableView</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>25</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>RecordShareHierarchy</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>26</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>vlocity_cmt__GenerateDocumentPDF</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>27</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>vlocity_cmt__Configure</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>28</sortOrder>
@@ -254,21 +269,6 @@
             <actionName>vlocity_cmt__CreateSchedules</actionName>
             <actionType>CustomButton</actionType>
             <sortOrder>31</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>vlocity_cmt__GenerateDocumentPDF</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>27</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>PrintableView</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>25</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>RecordShareHierarchy</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>26</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedContent>

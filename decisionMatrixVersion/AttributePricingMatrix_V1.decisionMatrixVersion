@@ -3,27 +3,6 @@
     <columns>
         <columnType>Input</columnType>
         <dataType>Text</dataType>
-        <displaySequence>4</displaySequence>
-        <isWildcardColumn>false</isWildcardColumn>
-        <name>CharacteristicValue</name>
-    </columns>
-    <columns>
-        <columnType>Output</columnType>
-        <dataType>Currency</dataType>
-        <displaySequence>5</displaySequence>
-        <isWildcardColumn>false</isWildcardColumn>
-        <name>MRC</name>
-    </columns>
-    <columns>
-        <columnType>Output</columnType>
-        <dataType>Currency</dataType>
-        <displaySequence>6</displaySequence>
-        <isWildcardColumn>false</isWildcardColumn>
-        <name>NRC</name>
-    </columns>
-    <columns>
-        <columnType>Input</columnType>
-        <dataType>Text</dataType>
         <displaySequence>1</displaySequence>
         <isWildcardColumn>false</isWildcardColumn>
         <name>SourceProductName</name>
@@ -41,6 +20,27 @@
         <displaySequence>3</displaySequence>
         <isWildcardColumn>false</isWildcardColumn>
         <name>CharacteristicName</name>
+    </columns>
+    <columns>
+        <columnType>Input</columnType>
+        <dataType>Text</dataType>
+        <displaySequence>4</displaySequence>
+        <isWildcardColumn>false</isWildcardColumn>
+        <name>CharacteristicValue</name>
+    </columns>
+    <columns>
+        <columnType>Output</columnType>
+        <dataType>Currency</dataType>
+        <displaySequence>5</displaySequence>
+        <isWildcardColumn>false</isWildcardColumn>
+        <name>MRC</name>
+    </columns>
+    <columns>
+        <columnType>Output</columnType>
+        <dataType>Currency</dataType>
+        <displaySequence>6</displaySequence>
+        <isWildcardColumn>false</isWildcardColumn>
+        <name>NRC</name>
     </columns>
     <decisionMatrixDefinition>AttributePricingMatrix</decisionMatrixDefinition>
     <label>AttributePricingMatrix V1</label>
