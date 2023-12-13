@@ -15,10 +15,6 @@
                 <outputField>FirstName</outputField>
             </mappingFields>
             <mappingFields>
-                <inputField>LastName</inputField>
-                <outputField>LastName</outputField>
-            </mappingFields>
-            <mappingFields>
                 <inputField>Phone</inputField>
                 <outputField>Phone</outputField>
             </mappingFields>
@@ -29,6 +25,10 @@
             <mappingFields>
                 <inputField>MailingCity</inputField>
                 <outputField>City</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>LastName</inputField>
+                <outputField>LastName</outputField>
             </mappingFields>
             <mappingFields>
                 <inputField>MailingStreet</inputField>
