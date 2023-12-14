@@ -19,6 +19,14 @@
                 <behavior>Edit</behavior>
                 <field>vlocity_cmt__Code__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Vlocity_Flex_Page__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Vlocity_Page_Description__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
