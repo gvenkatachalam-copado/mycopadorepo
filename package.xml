@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.AccountSource</members>
-        <members>Account.Name</members>
-        <members>Account.OwnerId</members>
+        <members>vlocity_cmt__Attribute__c.Is_Vlocity_Flex_Page__c</members>
+        <members>vlocity_cmt__Attribute__c.Vlocity_Page_Description__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>Account</members>
-        <name>CustomObject</name>
+        <members>VlocityAttributeRecordPage_test</members>
+        <name>FlexiPage</name>
     </types>
-    <version>58.0</version>
+    <types>
+        <members>vlocity_cmt__Attribute__c-vlocity_cmt__Attribute (Vlocity 2.5)</members>
+        <members>vlocity_cmt__Attribute__c-vlocity_cmt__Attribute Layout</members>
+        <members>vlocity_cmt__Attribute__c-vlocity_cmt__Vlocity Attribute Detail Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>59.0</version>
 </Package>
