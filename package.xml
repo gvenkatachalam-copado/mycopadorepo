@@ -10,7 +10,6 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>vlocity_cmt__Attribute__c-vlocity_cmt__Attribute (Vlocity 2.5)</members>
         <members>vlocity_cmt__Attribute__c-vlocity_cmt__Attribute Layout</members>
         <members>vlocity_cmt__Attribute__c-vlocity_cmt__Vlocity Attribute Detail Layout</members>
         <name>Layout</name>
