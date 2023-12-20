@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.AccountSource</members>
-        <members>Account.Name</members>
-        <members>Account.OwnerId</members>
-        <name>CustomField</name>
+        <members>2 smartsheet selection pro</members>
+        <name>EntitlementProcess</name>
     </types>
-    <types>
-        <members>Account</members>
-        <name>CustomObject</name>
-    </types>
-    <version>58.0</version>
+    <version>59.0</version>
 </Package>
