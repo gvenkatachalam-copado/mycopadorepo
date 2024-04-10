@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>SimpleAccount</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SimpleAccountTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Provide users access to all Copado objects, fields, tabs, applications and components across all Copado products</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Connected App</label>
+</PermissionSet>
