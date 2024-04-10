@@ -9,5 +9,9 @@
         <members>Account-Account Layout</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>Connected_App</members>
+        <name>PermissionSet</name>
+    </types>
     <version>60.0</version>
 </Package>
