@@ -16,7 +16,7 @@
             <name>Account_deactivation_notification</name>
             <type>Alert</type>
         </actions>
-        <active>true</active>
+        <active>false</active>
         <criteriaItems>
             <field>Account.Active__c</field>
             <operation>equals</operation>
