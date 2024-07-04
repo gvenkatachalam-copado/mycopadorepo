@@ -5,8 +5,7 @@
         <description>Account deactivation notification</description>
         <protected>false</protected>
         <recipients>
-            <recipient>gvenkatachalam@copado.com.devone</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/Account_Source_Email_Template</template>
