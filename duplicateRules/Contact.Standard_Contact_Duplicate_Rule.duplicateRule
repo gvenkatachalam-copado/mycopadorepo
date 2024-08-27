@@ -16,6 +16,10 @@
         <objectMapping>
             <inputObject>Contact</inputObject>
             <mappingFields>
+                <inputField>MailingPostalCode</inputField>
+                <outputField>PostalCode</outputField>
+            </mappingFields>
+            <mappingFields>
                 <inputField>MailingCity</inputField>
                 <outputField>City</outputField>
             </mappingFields>
@@ -46,10 +50,6 @@
             <mappingFields>
                 <inputField>Title</inputField>
                 <outputField>Title</outputField>
-            </mappingFields>
-            <mappingFields>
-                <inputField>MailingPostalCode</inputField>
-                <outputField>PostalCode</outputField>
             </mappingFields>
             <outputObject>Lead</outputObject>
         </objectMapping>

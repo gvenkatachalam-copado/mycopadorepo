@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Step --></value>
+        <value>ステップ</value>
     </caseValues>
     <fieldSets>
         <label><!-- Deployment Steps --></label>
@@ -89,6 +89,11 @@
     <fields>
         <label><!-- Parent Id --></label>
         <name>copado__ParentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promotion --></label>
+        <name>copado__Promotion__c</name>
+        <relationshipLabel><!-- Steps --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Read Only --></label>
@@ -179,11 +184,11 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Test</masterLabel>
-            <translation><!-- Test --></translation>
+            <translation>テスト</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Translations</masterLabel>
-            <translation><!-- Translations --></translation>
+            <translation>翻訳</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>URL Callout</masterLabel>
@@ -202,5 +207,5 @@
         <label><!-- dataJson --></label>
         <name>copado__dataJson__c</name>
     </fields>
-    <nameFieldLabel><!-- Step Name --></nameFieldLabel>
+    <nameFieldLabel>ステップ名</nameFieldLabel>
 </CustomObjectTranslation>

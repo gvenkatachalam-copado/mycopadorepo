@@ -84,6 +84,11 @@
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Record link shortcutting to Job Step&apos;s Job Execution --></help>
+        <label><!-- Job Execution --></label>
+        <name>copado__Job_Execution__c</name>
+    </fields>
+    <fields>
         <help><!-- For devs to map this process with any other process that happens outside Copado. --></help>
         <label><!-- External Job ID --></label>
         <name>copado__Job_Id__c</name>

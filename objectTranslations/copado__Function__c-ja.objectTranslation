@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Function --></value>
+        <value>関数</value>
     </caseValues>
     <fields>
         <help>この機能を識別するための一意な名前になります。関数の結果レコードには、レポートやダッシュボードでこれらの結果をフィルタリングするためのジョブタイプフィールドがあり、このAPI名も含まれています。</help>
@@ -21,7 +21,7 @@
         <name>copado__Callback_Type__c</name>
         <picklistValues>
             <masterLabel>ApexClass</masterLabel>
-            <translation><!-- ApexClass --></translation>
+            <translation>Apexクラス</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Flow</masterLabel>
@@ -29,7 +29,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Description of the function. --></help>
+        <help>関数の説明</help>
         <label><!-- Description --></label>
         <name>copado__Description__c</name>
     </fields>
@@ -44,7 +44,7 @@
         <name>copado__Image_Name__c</name>
     </fields>
     <fields>
-        <help><!-- Define the maxVolume and volumeTTL to be used to run a standalone function with these configurations. --></help>
+        <help>これらの設定でスタンドアロン関数を実行するために使用するmaxVolumeとvolumeTTLを定義します。</help>
         <label><!-- Options --></label>
         <name>copado__Options__c</name>
     </fields>
@@ -54,7 +54,12 @@
         <name>copado__Parameters__c</name>
     </fields>
     <fields>
-        <help><!-- Provide the script with the commands you would like the function to execute. --></help>
+        <help>関連する結果レコードにレンダリングするライトニングコンポーネントの名前です。名前は namespace:componentName 形式である必要があります。</help>
+        <label><!-- Result Viewer Component --></label>
+        <name>copado__Result_Viewer_Component__c</name>
+    </fields>
+    <fields>
+        <help>関数に実行させたいコマンドをスクリプトに記述します。</help>
         <label><!-- Script --></label>
         <name>copado__Script__c</name>
     </fields>
@@ -64,7 +69,7 @@
         <name>copado__Timeout__c</name>
     </fields>
     <fields>
-        <help><!-- Type of Copado function. --></help>
+        <help>コパード関数のタイプ</help>
         <label><!-- Type --></label>
         <name>copado__Type__c</name>
         <picklistValues>
@@ -77,12 +82,12 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Version of the function. --></help>
+        <help>関数のバージョン</help>
         <label><!-- Version --></label>
         <name>copado__Version__c</name>
     </fields>
     <fields>
-        <help><!-- Picklist field that defines the size of the worker. The available options are S, M, L, and XL. --></help>
+        <help>ワーカーのサイズを定義するピックリストフィールド。使用可能なオプションは、S、M、L、および XL です。</help>
         <label><!-- Worker Size --></label>
         <name>copado__Worker_Size__c</name>
         <picklistValues>
@@ -102,7 +107,7 @@
             <translation><!-- XL --></translation>
         </picklistValues>
     </fields>
-    <nameFieldLabel><!-- Function Name --></nameFieldLabel>
+    <nameFieldLabel>関数名</nameFieldLabel>
     <validationRules>
         <errorMessage><!-- Api name can only contain alphanumeric characters and must begin with a letter --></errorMessage>
         <name>copado__Function_Name_must_Be_Alpha_Numeric</name>

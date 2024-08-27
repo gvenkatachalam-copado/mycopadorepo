@@ -141,7 +141,17 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Pipeline_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Pipeline_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Active__c</fields>
+        <fields>copado__Platform__c</fields>
+        <fields>copado__Manage_Branches__c</fields>
+        <fields>copado__Git_Repository__c</fields>
+        <fields>copado__Main_Branch__c</fields>
+        <label>Pipeline Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -154,12 +164,16 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>copado__Additional_Information</fullName>
+        <description>These are the necessary extra fields to create a Pipeline record based on your customization. If you want to change this list, edit the &quot;Additional Information&quot; Field Set.</description>
+        <label>Additional Information</label>
+    </fieldSets>
     <fields>
         <fullName>copado__Active__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>If checked, all Branch Management features will be enabled in the Deployment Flow.</description>
-        <externalId>false</externalId>
         <inlineHelpText>If checked, all Branch Management features will be enabled in the Deployment Flow.</inlineHelpText>
         <label>Active</label>
         <trackHistory>false</trackHistory>
@@ -170,7 +184,6 @@
         <fullName>copado__Apply_Connection_Behaviours_to_existing__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>Use this option if you want User Stories which already promoted in your Copado Pipeline to apply to the connection behaviours for back promotions which you create in Copado Continuous Delivery</inlineHelpText>
         <label>Apply Connection Behaviors to All</label>
         <trackHistory>false</trackHistory>
@@ -182,7 +195,6 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>If checked, committing changes on user stories linked to this Pipeline will not be allowed</description>
-        <externalId>false</externalId>
         <inlineHelpText>If checked, committing changes on user stories linked to this Pipeline will not be allowed</inlineHelpText>
         <label>Block Commits</label>
         <trackHistory>false</trackHistory>
@@ -193,7 +205,6 @@
         <fullName>copado__Branch_Management_Coordinates__c</fullName>
         <deprecated>false</deprecated>
         <description>This field is used to store the Branch Management Step locations of each box. This field should not be added to the page layout.</description>
-        <externalId>false</externalId>
         <label>Branch Management Coordinates</label>
         <length>50000</length>
         <trackHistory>false</trackHistory>
@@ -204,7 +215,6 @@
     <fields>
         <fullName>copado__Calculate_Based_on__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>If Branch is selected, Branch Management page will work as before, if User Story selected, calculation and result will be based on User Stories.</inlineHelpText>
         <label>Calculate Based on</label>
         <required>false</required>
@@ -231,7 +241,6 @@
     <fields>
         <fullName>copado__Continuous_Delivery_Configuration_Json__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Continuous Delivery Configuration Json</label>
         <length>131072</length>
         <trackHistory>false</trackHistory>
@@ -243,7 +252,6 @@
         <fullName>copado__Continuous_Delivery_Enabled__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Continuous Delivery Enabled</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -252,7 +260,6 @@
     <fields>
         <fullName>copado__Copado_DX_Mode__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>Selected DX mode will determine scratch metadata sources.</inlineHelpText>
         <label>Copado DX Mode</label>
         <required>false</required>
@@ -303,7 +310,6 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>If checked, Deployment Flow Steps best practices validations will be disabled.</description>
-        <externalId>false</externalId>
         <inlineHelpText>If checked, Deployment Flow Steps best practices validations will be disabled.</inlineHelpText>
         <label>Disable Validations</label>
         <trackHistory>false</trackHistory>
@@ -314,7 +320,6 @@
         <fullName>copado__Enable_Copado_DX__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Enable Copado DX</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -325,7 +330,6 @@
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <description>If unchecked, Copado will stop applying Smart Conflict resolution during the promotion process and users will have to manually resolve conflicts again in every subsequent promotion.</description>
-        <externalId>false</externalId>
         <inlineHelpText>If unchecked, Copado will stop applying Smart Conflict resolution during the promotion process and users will have to manually resolve conflicts again in every subsequent promotion.</inlineHelpText>
         <label>Enable Smart Conflict Resolution</label>
         <trackHistory>false</trackHistory>
@@ -337,7 +341,6 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>If checked, Environment names must equal their corresponding Branches in the Deployment Flow Steps.</description>
-        <externalId>false</externalId>
         <inlineHelpText>If checked, Environment names must equal their corresponding Branches in the Deployment Flow Steps.</inlineHelpText>
         <label>Enforce branch/env naming convention</label>
         <trackHistory>false</trackHistory>
@@ -348,7 +351,6 @@
         <fullName>copado__Exclude_From_Auto_Resolve__c</fullName>
         <deprecated>false</deprecated>
         <description>Conflicts found in the selected metadata types are not auto-resolved by Copado when merging feature branches into the promotion branch. The conflicts can be manually resolved using Copado.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Conflicts found in the selected metadata types are not auto-resolved by Copado when merging feature branches into the promotion branch. The conflicts can be manually resolved using Copado.</inlineHelpText>
         <label>Exclude From Auto Resolve</label>
         <required>false</required>
@@ -365,7 +367,6 @@
         <fullName>copado__Flow_Step_Coordinates__c</fullName>
         <deprecated>false</deprecated>
         <description>This field is used to store the Deployment Flow Step locations of each box. This field should not be added to the page layout.</description>
-        <externalId>false</externalId>
         <label>Flow Step Coordinates</label>
         <length>50000</length>
         <trackHistory>false</trackHistory>
@@ -378,7 +379,6 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Git Repository linked to the Deployment Flow. All branches of the Deployment Flow Steps must exist in this Git Repository.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Git Repository linked to the Deployment Flow. All branches of the Deployment Flow Steps must exist in this Git Repository.</inlineHelpText>
         <label>Git Repository</label>
         <referenceTo>copado__Git_Repository__c</referenceTo>
@@ -391,7 +391,6 @@
     <fields>
         <fullName>copado__Hide_Tabs__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>Tabs to hide in Branch Management detail window</inlineHelpText>
         <label>Hide Tabs</label>
         <required>false</required>
@@ -466,7 +465,7 @@
         <description>Link to open the Pipeline Manager to promote and back promote User Stories.</description>
         <externalId>false</externalId>
         <formula>HYPERLINK(&apos;/apex/&apos;&amp;
-            IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)&amp;IF( ISPICKVAL(copado__Calculate_Based_on__c, &apos;User Story&apos;), IF( copado__Active__c,&apos;PipelineManager?mode=manager&amp;id=&apos;&amp;Id, &apos;PipelineManager?mode=diagram&amp;id=&apos;&amp;Id), &apos;BranchManagement?id=&apos;&amp;Id), &apos;Pipeline Manager&apos;, IF($User.UIThemeDisplayed != &quot;Theme4d&quot;,&apos;_blank&apos;,&apos;_self&apos;))</formula>
+            IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)&amp;IF( ISPICKVAL(copado__Calculate_Based_on__c, &apos;User Story&apos;), IF( copado__Active__c,&apos;PipelineManager?mode=manager&amp;id=&apos;&amp;Id, &apos;PipelineManager?mode=diagram&amp;id=&apos;&amp;Id), &apos;BranchManagement?id=&apos;&amp;Id), $Label.copado__PipelineManager, IF($User.UIThemeDisplayed != &quot;Theme4d&quot;,&apos;_blank&apos;,&apos;_self&apos;))</formula>
         <inlineHelpText>Link to open the Pipeline Manager to promote and back promote User Stories.</inlineHelpText>
         <label>Manage Releases</label>
         <required>false</required>
@@ -478,7 +477,6 @@
     <fields>
         <fullName>copado__Merge_Strategy__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>When a conflicted file cannot be semantically merged during an Auto Resolve, the entire file is overwritten by default. You can choose to overwrite only the conflicting lines and merge the mergeable lines; Copado uses the &quot;Theirs&quot; git merge strategy.</inlineHelpText>
         <label>Auto Resolve Conflict Strategy</label>
         <required>false</required>
@@ -519,7 +517,6 @@ This value will prefill the order by field on related Promotion record creation 
     <fields>
         <fullName>copado__Platform__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Platform</label>
         <required>true</required>
         <trackHistory>false</trackHistory>
@@ -546,7 +543,6 @@ This value will prefill the order by field on related Promotion record creation 
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Static Code Analysis settings used whenever the analysis is run in Environments or User Stories linked to the Deployment Flow.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Static Code Analysis settings used whenever the analysis is run in Environments or User Stories linked to the Deployment Flow.</inlineHelpText>
         <label>Static Code Analysis Settings</label>
         <referenceTo>copado__Static_Code_Analysis_Settings__c</referenceTo>
