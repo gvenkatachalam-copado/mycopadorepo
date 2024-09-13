@@ -600,7 +600,7 @@
         <filters>
             <field>CASES.STATUS</field>
             <operation>equals</operation>
-            <value>New</value>
+            <value>New,Working,Escalated</value>
         </filters>
         <label>test cases view</label>
     </listViews>
