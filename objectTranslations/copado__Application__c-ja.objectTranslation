@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Application --></value>
+        <value>アプリケーション</value>
     </caseValues>
     <fields>
         <label><!-- Description --></label>
@@ -55,12 +55,12 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Uncertain</masterLabel>
-            <translation><!-- Uncertain --></translation>
+            <translation>不確定</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Unstable</masterLabel>
             <translation>不安定</translation>
         </picklistValues>
     </fields>
-    <nameFieldLabel><!-- Name --></nameFieldLabel>
+    <nameFieldLabel>名称</nameFieldLabel>
 </CustomObjectTranslation>

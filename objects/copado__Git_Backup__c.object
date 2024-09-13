@@ -141,7 +141,17 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Snapshot_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Snapshot_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Snapshot_Frequency__c</fields>
+        <fields>copado__Org__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Branch__c</fields>
+        <fields>CreatedById</fields>
+        <label>Snapshot Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>A Git Snapshot record in Copado defines a connection between a Salesforce Org with a Git Repository/branch.</description>
@@ -667,10 +677,33 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Cron_Expression__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>You can use www.cronmaker.com to create more sophisticated cron expressions. Please keep in mind that certain cron expressions might not be supported by Salesforce.</inlineHelpText>
+        <label>Cron Expression</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>copado__Frequency__c</fullName>
         <deprecated>false</deprecated>
         <description>Schedule automatic metadata backups. With the frequency set, Copado will automatically commit the metadata components of the Org into the Branch.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Schedule automatic metadata backups. With the frequency set, Copado will automatically commit the metadata components of the Org into the Branch.</inlineHelpText>
         <label>Frequency</label>
         <required>false</required>
@@ -706,7 +739,6 @@
         <fullName>copado__Git_Repository__c</fullName>
         <deprecated>false</deprecated>
         <description>Git Repository linked to the Git Snapshot. The specified Branch must exist in the Git Repository.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Git Repository linked to the Git Snapshot. The specified Branch must exist in the Git Repository.</inlineHelpText>
         <label>Git Repository</label>
         <referenceTo>copado__Git_Repository__c</referenceTo>
@@ -721,7 +753,6 @@
     <fields>
         <fullName>copado__Git_Snapshot_Permissions__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Git Snapshot Permissions</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -751,7 +782,6 @@
         <fullName>copado__Last_Backup__c</fullName>
         <deprecated>false</deprecated>
         <description>Date of the last Snapshot committed into the Branch.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Date of the last Snapshot committed into the Branch.</inlineHelpText>
         <label>Last Snapshot</label>
         <required>false</required>
@@ -762,7 +792,6 @@
         <fullName>copado__Last_Compliance_Scan_Date__c</fullName>
         <deprecated>false</deprecated>
         <description>Date of the last Compliance Scan of the Branch specified in the Git Snapshot.</description>
-        <externalId>false</externalId>
         <inlineHelpText>Date of the last Compliance Scan of the Branch specified in the Git Snapshot.</inlineHelpText>
         <label>Last Compliance Scan Date</label>
         <required>false</required>
@@ -772,7 +801,6 @@
     <fields>
         <fullName>copado__Metadata_Types__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <inlineHelpText>Empty means all types. Select one or more types to limit the backup only to selected items.</inlineHelpText>
         <label>Metadata Types</label>
         <length>32000</length>
@@ -784,7 +812,6 @@
         <fullName>copado__Org__c</fullName>
         <deprecated>false</deprecated>
         <description>A validated Credential used to retrieve the metadata that will be committed to the specified Branch in the Git Snapshot.</description>
-        <externalId>false</externalId>
         <inlineHelpText>A validated Credential used to retrieve the metadata that will be committed to the specified Branch in the Git Snapshot.</inlineHelpText>
         <label>Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
@@ -795,6 +822,64 @@
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>copado__Other_Information__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Other Information</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__Pipeline__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <inlineHelpText>Pipeline where the Git snapshot will be applied. It must be associated to the specified credential.</inlineHelpText>
+        <label>Pipeline</label>
+        <referenceTo>copado__Deployment_Flow__c</referenceTo>
+        <relationshipLabel>Git Snapshots</relationshipLabel>
+        <relationshipName>Git_Snapshots</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Scope__c</fullName>
+        <deprecated>false</deprecated>
+        <inlineHelpText>Use this field to specify the files for which you want to take the snapshot. The format may vary depending on the extension that you are using. Please refer to your extension documentation.</inlineHelpText>
+        <label>Scope</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__Snapshot_Frequency__c</fullName>
+        <defaultValue>&apos;None&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <inlineHelpText>Use this field to configure automatic metadata backups. Copado will automatically commit the metadata components of the Org as per the frequency and cron expression defined.</inlineHelpText>
+        <label>Frequency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Schedule</fullName>
+                    <default>false</default>
+                    <label>Schedule</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>copado__View_in_Git__c</fullName>
