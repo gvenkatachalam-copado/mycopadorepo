@@ -149,8 +149,8 @@
         <fields>copado__End_Date__c</fields>
         <fields>copado__Working_Days_Left__c</fields>
         <fields>copado__InitialPlannedVelocity__c</fields>
-        <fields>copado__PlannedVelocity__c</fields>
-        <fields>copado__ActualVelocity__c</fields>
+        <fields>copado__Planned_Velocity__c</fields>
+        <fields>copado__Actual_Velocity__c</fields>
         <label>Sprint Compact Layout</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -181,6 +181,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Actual_Velocity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This value is calculated by adding up the total planned points of the user stories in the sprint when their status is changed to Completed. This status can be configured in the Actual Velocity Statuses custom metadata type. Please refer to the Copado Sprint Velocity article for more information.</inlineHelpText>
+        <label>Actual Velocity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Days_in_sprint__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -195,7 +208,6 @@
     <fields>
         <fullName>copado__End_Date__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>End Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -229,7 +241,6 @@
     <fields>
         <fullName>copado__Objective__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Sprint Goal</label>
         <length>10000</length>
         <trackHistory>false</trackHistory>
@@ -251,10 +262,22 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Planned_Velocity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This value is recalculated with every change made to the Planned Points or Planned Points Other assigned to all the user stories in the sprint or when new user stories are added.</inlineHelpText>
+        <label>Planned Velocity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Project__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Project</label>
         <referenceTo>copado__Project__c</referenceTo>
         <relationshipLabel>Sprints</relationshipLabel>
@@ -267,7 +290,6 @@
         <fullName>copado__Release__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Release</label>
         <referenceTo>copado__Release__c</referenceTo>
         <relationshipLabel>Sprints</relationshipLabel>
@@ -279,7 +301,6 @@
     <fields>
         <fullName>copado__Start_Date__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Start Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -288,7 +309,6 @@
     <fields>
         <fullName>copado__Status__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -335,7 +355,6 @@
         <fullName>copado__Team__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Team</label>
         <referenceTo>copado__Team__c</referenceTo>
         <relationshipLabel>Sprints</relationshipLabel>
@@ -389,6 +408,18 @@
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <label>Sprint</label>
     <listViews>

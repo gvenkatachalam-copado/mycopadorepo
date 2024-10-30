@@ -9,6 +9,10 @@
         <name>copado__Bundle_Sync_Fields</name>
     </fieldSets>
     <fieldSets>
+        <label><!-- Bundled Stories --></label>
+        <name>copado__Bundled_Stories</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
@@ -628,6 +632,11 @@
         <name>copado__Parent_Epic_Title__c</name>
     </fields>
     <fields>
+        <help><!-- This field displays the total number of tests associated with this user story that are currently in progress or have failed. These tests might require further attention or resolution before you can promote this user story. --></help>
+        <label><!-- Pending Tests --></label>
+        <name>copado__Pending_Tests__c</name>
+    </fields>
+    <fields>
         <help><!-- Use this field to split your User Story effort estimation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope. --></help>
         <label><!-- Planned Points Other --></label>
         <name>copado__Planned_Points_Other__c</name>
@@ -740,6 +749,10 @@
             <translation><!-- Completed --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Draft</masterLabel>
             <translation><!-- Draft --></translation>
         </picklistValues>
@@ -754,6 +767,10 @@
         <picklistValues>
             <masterLabel>Rejected</masterLabel>
             <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Do</masterLabel>
+            <translation><!-- To Do --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -838,6 +855,18 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <recordTypes>
         <label><!-- Bug --></label>

@@ -183,6 +183,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
+    <owner>gvenkatachalam@copado.com.prod</owner>
     <runningUser>gvenkatachalam@copado.com.prod</runningUser>
     <textColor>#000000</textColor>
     <title>CCM - Release Dashboard</title>

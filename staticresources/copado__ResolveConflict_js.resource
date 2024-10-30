@@ -3,6 +3,12 @@ var conversionFunc = conversionFunc || {},
     parseOperations = parseOperations || {},
     modalOperations = modalOperations || {},
     panelFunctions = panelFunctions || {};
+
+const getUnzippedContent = async function(content) {
+    returnContent = await content.async("string");
+    return returnContent;
+};
+
 (function(self) {
     var spacing = '  ',
         getType = function(obj) {
@@ -168,7 +174,6 @@ var conversionFunc = conversionFunc || {},
         } else $copado('[cType="xml"]').addClass('slds-button_brand');
         
         if (att2Res || (attSource.length > 0 && attTarget.length > 0) || (isRollback && preSourceRollback && preTargetRollback)) {
-           
             var attach = att2Res.length > 0 ? getAttachmentById(config.parentId, att2Res) : '';
             if (!attach && !bundleFlag) {
                 if (isRollback) {
@@ -177,69 +182,174 @@ var conversionFunc = conversionFunc || {},
                     if(preTarget && preTarget[0] === 'PREVIEW NOT AVAILABLE'){
                         panes = 1;
                     }
-                }
-                else{
-                    bundleSource = unzip_Decode(attSource);
-                    bundleTarget = unzip_Decode(attTarget);
-                    if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
-                        preSource[0] =
-                            Object.keys(bundleSource[0].files)[0] != 'package.xml'
-                                ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
-                                : '';
-                        preSource[1] = bundleSource[1][0];
-                        preTarget[0] =
-                            Object.keys(bundleTarget[0].files)[0] != 'package.xml'
-                                ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
-                                : '';
-                        preTarget[1] = bundleTarget[1][0];
+                    preFlag = true;
+                    if(preTarget[1][0].includes('aura') || preTarget[1][0].includes('lwc')) {
+                        modalDiff(true, cb, preSource, preTarget);
                     } else {
-                        bundleFlag = true;
-                        if(!cb){	
-                            modalOperations.showFileModal();	
+                        if(typeof preSourceRollback[0] == 'object') {
+                            getUnzippedContent(preSourceRollback[0].file(preTarget[1])).then(function(resultSource) {
+                                preSource[0] = resultSource;
+                                preSource[1] = preTarget[1];
+                                performCodeDiff(attach, returnFlag, sPane,cb, false);
+                            });
                         }
-                        modalOperations.showFileModal();
-                        $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
-
-                        for (var i = 0; i < bundleSource[1].length; i++) {
-                            if (bundleSource[1][i].toLowerCase() != 'package.xml') {
-                                /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
-                                $copado('[id="fs2append"]').append(
-                                    '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
-                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                            ? 'background-color: #f4f7fa !important;'
-                                            : 'background-color: #FFF !important;') +
-                                        '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
-                                        bundleSource[1][i] +
-                                        '</span></h2></div>' +
-                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                            ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
-                                            bundleSource[1][i] +
-                                            '\');"><input id="autoResolveButton-' +
-                                            i +
-                                            '" name="radio-' +
-                                            i +
-                                            '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
-                                            i +
-                                            '"><span class="slds-radio_faux" >' +
-                                            viewDifferences +
-                                            '</span></label></span></div> </div></div>'
-                                            : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
-                                            bundleSource[1][i] +
-                                            '\');">' +
-                                            viewFile +
-                                            '</a>') +
-                                        '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
-                                );
-                            }
+                        else {
+                            performCodeDiff(attach, returnFlag, sPane,cb, false);
                         }
-                        returnFlag = true;
                     }
                 }
+                else{
+                    preFlag = true;
+                    unzip_Decode(attSource).then(function(resultSource) {
+                        bundleSource = resultSource ? resultSource : '';
+                        unzip_Decode(attTarget).then(function(resultTarget) {
+                            bundleTarget = resultTarget ? resultTarget : '';
+                            if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
+                                if(Object.keys(bundleSource[0].files)[0] != 'package.xml'){
+                                    getUnzippedContent(bundleSource[0].file(Object.keys(bundleSource[0].files)[0])).then(function (content) {
+                                        preSource[0] = content ? content : '';
+                                        preSource[1] = bundleSource[1][0];
+                                        if(Object.keys(bundleTarget[0].files)[0] != 'package.xml'){
+                                            getUnzippedContent(bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0])).then(function (contentTarget) {
+                                                preTarget[0] = contentTarget ? contentTarget : '';
+                                                preTarget[1] = bundleTarget[1][0];
+                                                returnFlag = false;
+                                                performCodeDiff(attach, returnFlag, sPane, cb, false);
+                                            });
+                                        } else {
+                                            preTarget[0] = '';
+                                            preTarget[1] = bundleTarget[1][0];
+                                            performCodeDiff(attach, returnFlag, sPane, cb, false);
+                                        }
+                                        
+                                    });
+                                }else {
+                                    preSource[0] = '';
+                                    preSource[1] = bundleSource[1][0];
+                                    if(Object.keys(bundleTarget[0].files)[0] != 'package.xml'){
+                                        getUnzippedContent(bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0])).then(function (contentTarget) {
+                                            preTarget[0] = contentTarget ? contentTarget : '';
+                                            preTarget[1] = bundleTarget[1][0];
+                                            performCodeDiff(attach, returnFlag, sPane, cb, true);
+                                        });
+                                    }else {
+                                        preTarget[0] = '';
+                                        preTarget[1] = bundleTarget[1][0];
+                                        performCodeDiff(attach, returnFlag, sPane, cb, false);
+                                    }
+                                }
+                            } else {
+                                modalDiff(bundleFlag, cb, bundleSource, bundleTarget);
+                            }
+                        });
+                    });
+                }
                 preFlag = true;
+                
+            }
+            else {
+                performCodeDiff(attach, returnFlag, sPane,cb, false);
             }
             
-            if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
+            cb && cb(config.attachName);
+        }
+    };
+    self.setPreValueForSelectedFiles = function(sPane, format, cb) {
+        var att2ResList = $copado('[id$=attsHiddenInp]').val();
+        for(var i =0; i<JSON.parse(att2ResList).length; i++) {
+            att2Res = JSON.parse(att2ResList)[i];
+        
+            attConflictPathName = $copado('[id$=attHiddenAttachName]').val();
+            $copado('#xmlJson>button').removeClass('slds-button_brand');
+            if (format) {
+                $copado(format).addClass('slds-button_brand');
+                currentMode = format = $copado(format).attr('cType');
+                jsCookies.set('merge.conflict.format', currentMode);
+            } else if (!format && currentMode) {
+                $copado('[cType="' + currentMode + '"]').addClass('slds-button_brand');
+            } else $copado('[cType="xml"]').addClass('slds-button_brand');
+            
+            if (att2Res || (attSource.length > 0 && attTarget.length > 0) || (isRollback && preSourceRollback && preTargetRollback)) {
+            
+                var attach = att2Res;
+                if (!attach && !bundleFlag) {
+                    if (isRollback) {
+                        preSource = preSourceRollback;
+                        preTarget = preTargetRollback;
+                        if(preTarget && preTarget[0] === 'PREVIEW NOT AVAILABLE'){
+                            panes = 1;
+                        }
+                    }
+                    else{
+                        unzip_Decode(attSource).then( function (attSrc){ 
+                            bundleSource = attSrc ? attSrc : '';
+                            unzip_Decode(attTarget).then( function (attTgt){ 
+                                bundleTarget = attTgt ? attTgt : '';
+                                if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
+                                    if(Object.keys(bundleSource[0].files)[0] != 'package.xml') {
+                                        getUnzippedContent(bundleSource[0].file(Object.keys(bundleSource[0].files)[0])).then( function (srcContent) {
+                                            preSource[0] = srcContent ? srcContent : '';
+                                            preSource[1] = bundleSource[1][0];
+                                            if(Object.keys(bundleTarget[0].files)[0] != 'package.xml'){
+                                                getUnzippedContent(bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0])).then( function (tgtContent) {
+                                                    preTarget[0] = tgtContent ? tgtContent : '';
+                                                    preTarget[1] = bundleTarget[1][0];
+                                                    performCodeDiffSelected(attach, returnFlag, sPane, cb, preFlag);
+                                                });
+                                            } else {
+                                                preTarget[0] = '';
+                                                preTarget[1] = bundleTarget[1][0];
+                                                performCodeDiffSelected(attach, returnFlag, sPane, cb, preFlag);
+                                            }
+                                        });
+                                    } else {
+                                        preSource[0] = '';
+                                        preSource[1] = bundleSource[1][0];
+                                        if(Object.keys(bundleTarget[0].files)[0] != 'package.xml'){
+                                            getUnzippedContent(bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0])).then( function (tgtContent) {
+                                                preTarget[0] = tgtContent ? tgtContent : '';
+                                                preTarget[1] = bundleTarget[1][0];
+                                                performCodeDiffSelected(attach, returnFlag, sPane, cb, preFlag);
+                                            });
+                                        } else {
+                                            preTarget[0] = '';
+                                            preTarget[1] = bundleTarget[1][0];
+                                            performCodeDiffSelected(attach, returnFlag, sPane, cb, preFlag);
+                                        }
+                                    }
+                                }
+                                else {
+                                    modalDiff(bundleFlag, cb, bundleSource, bundleTarget);
+                                }
+                            });
+                        });
+                    }
+                    preFlag = true;
+                } else {
+                    performCodeDiffSelected(attach, returnFlag, sPane, cb, preFlag);
+                }
                 
+                cb && cb(config.attachName);
+            }
+        }
+    }
+    self.classSetValue = function(elem) {
+        var index = $copado(elem).attr('panel');
+        resolutionToolTip = index === '3' ? resolutionToolTip3panel : resolutionToolTip2panel;
+        jsCookies.set('merge.conflict.selection', index);
+        $copado('#grp>.slds-button_brand').removeClass('slds-button_brand');
+        $copado(elem).addClass('slds-button_brand');
+        self.setPreValue(index);
+    };
+    var unzip_Decode = async function(elem) {
+            zip = await JSZip.loadAsync(elem, { base64: true });
+            return [zip, Object.keys(zip.files)];
+            
+        },
+        
+        performCodeDiff = function(attach, returnFlag, sPane, cb, zipFlag) {
+            format = '';
+            if (((attach && attach.Body.length > 0) || !zipFlag) && !returnFlag) {
                 if(attConflictPathName){
                     config.attachName = attConflictPathName;
                 }else{
@@ -252,10 +362,8 @@ var conversionFunc = conversionFunc || {},
                 if (sPane) panes = sPane;
 
                 var offsetAmount = 120;
-                attachmentInfo = !preFlag
-                    ? attach.Name.replace('AUTO ', '')
-                          .replace('RESOLVED ', '')
-                          .split(' ')
+                attachmentInfo = !preFlag ? attach.Name.replace('AUTO ', '').replace('RESOLVED ', '').split(' ')
+                    : typeof config.attachName === 'object' ? config.attachName[0].split('/')
                     : config.attachName.split('/');
                 //correction for the types which's label and name are not the same hence there might be empty spaces in the label exp:custom object, field, layout etc.
                 if (attachmentInfo.length > 2 && !preFlag) {
@@ -269,6 +377,150 @@ var conversionFunc = conversionFunc || {},
                 usName = attachmentInfo[0];
 
                 //$copado('.slds-modal__header:last').append('<center><span id="infoOnMerge"><strong style="font-size: medium;">'+attachmentInfo[1]+'</strong> ');
+                var fileName = preSource && preSource.length ? (preSource[0] > preTarget[0] ? preSource[1] : preTarget[1]) : '';
+                $copado('.files-to-compare').text(preSource && preSource.length > 0 ? fileName : attachmentInfo[1]);
+
+                
+                initCodeDiffEditor(attach, pMode);
+                
+                
+                $copado('#errorMessage').text('');
+                modalOperations.toogleLocker(false);
+                if(!cb){
+                    modalOperations.showFileModal();	
+                }
+            }
+        },
+        initCodeDiffEditor = function (attach, pMode) {
+            if (panes != 1) {
+                if (
+                    (pMode.toLowerCase().indexOf('xml') > -1) &&
+                    (!parseOperations.parseErrorExist(attach ? prapareValue(Base64.decode(attach.Body), format) : preSource[0]) || format)
+                ) {
+                    $copado('#xmlJson').css('display', '');
+                    format = currentMode;
+                    offsetAmount = 30;
+                } else {
+                    currentMode = 'xml';
+                    $copado('#xmlJson').css('display', 'none');
+                }
+
+                isConflictFile = usName.split('.')[1] == 'conflict';
+                directValue = false;
+                $copado('#view').css('display', '');
+                $copado('.CodeMirror-simplescroll').css('display', 'none');
+                
+                var value = attach ? prapareValue(Base64.decode(attach.Body), format) : prapareValue(typeof preSource == 'string' ? preSource : preSource[0], format);
+                var orig1 = attach ? prepareOrig(Base64.decode(attach.Body), format) : prapareValue(preTarget[0], format);
+                self.featureValue = orig1;
+
+                editor = CodeMirror.MergeView(document.getElementById('view'), {
+                    value: value,
+                    origLeft: panes == 3 ? value : null,
+                    orig: orig1,
+                    lineNumbers: true,
+                    mode: format == 'json' ? 'application/json' : pMode,
+                    highlightDifferences: true,
+                    connect: 'align',
+                    collapseIdentical: true,
+                    readOnly: attach ? false : true,
+                    lineWrapping: true,
+                    extraKeys: {
+                        'Ctrl-Q': function(cm) {
+                            cm.foldCode(cm.getCursor());
+                        }
+                    },
+                    foldGutter: true,
+                    gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter']
+                });
+
+                $copado('.CodeMirror-merge-editor').prepend(
+                    '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + resolutionToolTip + '</span></div></div></div><span>' +
+                    (attach ? resolution +
+                        '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                        '</center></div>' : source + jqxdatatable_config.data.orgName)
+                );
+                $copado('.CodeMirror-merge-pane-rightmost').prepend(
+                    '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + featureToolTip + '</span></div></div></div><span>' +
+                    (attach ? featureBranch +
+                        '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                        '</center></div>' : target + jqxdatatable_config.data.targetOrgName)
+                );
+                if ($copado('.CodeMirror-merge-left').length > 0) {
+                    $copado('.CodeMirror-merge-left').prepend(
+                        '<div class="panel top" style="background-color:white;"><center><div id="promotionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+promotionToolTip+'</span></div></div></div><span>' + promotionBranch + '</span>'+
+                        '<div onmouseenter="$copado(\'#promotionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#promotionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
+                        '</center></div>'
+                    );
+                }
+
+                var gapSize =
+                    parseInt(
+                        $copado('.CodeMirror-merge-gap')
+                            .css('height')
+                            .slice(0, -2)
+                    ) + 19;
+                $copado('.CodeMirror-merge-gap').css('height', gapSize);
+            } else {
+                currentMode = 'xml';
+                $copado('#xmlJson').css('display', 'none');
+
+                CodeMirror.defineMode('highlightSearch', function(config, parserConfig) {
+                    var searchOverlay = {
+                        token: function(stream, state) {
+                            if (stream.match(keyword)) {
+                                return 'highlightSearch';
+                            }
+                            while (stream.next() != null && !stream.match(keyword, false)) {}
+                            return null;
+                        }
+                    };
+                    return CodeMirror.overlayMode(CodeMirror.getMode(config, parserConfig.backdrop || pMode), searchOverlay);
+                });
+                initEditor2();
+                directValue = true;
+                $copado('#view').css('display', 'none');
+                $copado('.CodeMirror-simplescroll').css('display', '');
+
+                editor2.focus();
+                editor2.setValue(Base64.decode(attach.Body));
+            }
+        },
+        performCodeDiffSelected = function(attach, returnFlag, sPane, cb, preFlag) {
+
+            format = '';
+            if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
+                    
+                if(attConflictPathName){
+                    config.attachName = attConflictPathName;
+                }else{
+                    config.attachName = !preFlag ? attach.Name : preSource[0] > preTarget[0] ? preSource[1] : preTarget[1];
+                }
+                config.hasError = false;
+                config.alreadyChecked = true;
+                $copado('#toLineDiv,.CodeMirror-simplescroll,.CodeMirror-merge-2pane,.CodeMirror-merge-3pane,#infoOnMerge').remove();
+
+                if (sPane) panes = sPane;
+
+                var offsetAmount = 120;
+                attachmentInfo = !preFlag
+                    ? attach.Name.replace('AUTO ', '')
+                        .replace('RESOLVED ', '')
+                        .split(' ')
+                    : config.attachName.split('/');
+                
+                //correction for the types which's label and name are not the same hence there might be empty spaces in the label exp:custom object, field, layout etc.
+                if (attachmentInfo.length > 2 && !preFlag) {
+                    tempAttachments = attachmentInfo;
+                    attachmentInfo = [];
+                    attachmentInfo.push(tempAttachments[0]);
+                    attachmentInfo.push(tempAttachments.slice(1).join(' '));
+                }
+
+                pMode = defineMode();
+                usName = attachmentInfo[0];
+
+                $copado('.slds-modal__header:last').append('<center><span id="infoOnMerge"><strong style="font-size: medium;">'+attachmentInfo[1]+'</strong> ');
                 var fileName = preSource && preSource.length ? (preSource[0] > preTarget[0] ? preSource[1] : preTarget[1]) : '';
                 $copado('.files-to-compare').text(preSource && preSource.length > 0 ? fileName : attachmentInfo[1]);
                 
@@ -290,9 +542,16 @@ var conversionFunc = conversionFunc || {},
                     $copado('#view').css('display', '');
                     $copado('.CodeMirror-simplescroll').css('display', 'none');
                     
-                    var value = attach ? prapareValue(Base64.decode(attach.Body), format) : prapareValue(preSource[0], format);
-                    var orig1 = attach ? prepareOrig(Base64.decode(attach.Body), format) : prapareValue(preTarget[0], format);
+                    var value = attach ? prapareValue(Base64.decode(attach.Body.asByteArray), format) : prapareValue(preSource[0], format);
+                    var orig1 = attach ? prepareOrig(Base64.decode(attach.Body.asByteArray), format) : prapareValue(preTarget[0], format);
                     self.featureValue = orig1;
+
+                    let att2Resolve = {};
+                        att2Resolve.Id = attach.Id;
+                        att2Resolve.Body = self.featureValue;
+                        att2Resolve.oldName = attach.Name;
+                        att2Resolve.Name = attach.Name;
+                    self.attList.push(att2Resolve);
 
                     editor = CodeMirror.MergeView(document.getElementById('view'), {
                         value: value,
@@ -371,258 +630,120 @@ var conversionFunc = conversionFunc || {},
                     modalOperations.showFileModal();	
                 }
             }
-            cb && cb(config.attachName);
-        }
-        
-    };
-    self.setPreValueForSelectedFiles = function(sPane, format, cb) {
-        var att2ResList = $copado('[id$=attsHiddenInp]').val();
-        for(var i =0; i<JSON.parse(att2ResList).length; i++) {
-            att2Res = JSON.parse(att2ResList)[i];
-        
-            attConflictPathName = $copado('[id$=attHiddenAttachName]').val();
-            $copado('#xmlJson>button').removeClass('slds-button_brand');
-            if (format) {
-                $copado(format).addClass('slds-button_brand');
-                currentMode = format = $copado(format).attr('cType');
-                jsCookies.set('merge.conflict.format', currentMode);
-            } else if (!format && currentMode) {
-                $copado('[cType="' + currentMode + '"]').addClass('slds-button_brand');
-            } else $copado('[cType="xml"]').addClass('slds-button_brand');
-            
-            if (att2Res || (attSource.length > 0 && attTarget.length > 0) || (isRollback && preSourceRollback && preTargetRollback)) {
-            
-                var attach = att2Res;
-                if (!attach && !bundleFlag) {
-                    if (isRollback) {
-                        preSource = preSourceRollback;
-                        preTarget = preTargetRollback;
-                        if(preTarget && preTarget[0] === 'PREVIEW NOT AVAILABLE'){
-                            panes = 1;
-                        }
-                    }
-                    else{
-                        bundleSource = unzip_Decode(attSource);
-                        bundleTarget = unzip_Decode(attTarget);
-                        if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
-                            preSource[0] =
-                                Object.keys(bundleSource[0].files)[0] != 'package.xml'
-                                    ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
-                                    : '';
-                            preSource[1] = bundleSource[1][0];
-                            preTarget[0] =
-                                Object.keys(bundleTarget[0].files)[0] != 'package.xml'
-                                    ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
-                                    : '';
-                            preTarget[1] = bundleTarget[1][0];
-                        } else {
-                            bundleFlag = true;
-                            if(!cb){	
-                                modalOperations.showFileModal();	
-                            }
-                            modalOperations.showFileModal();
-                            $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
-
-                            for (var i = 0; i < bundleSource[1].length; i++) {
-                                if (bundleSource[1][i].toLowerCase() != 'package.xml') {
-                                    /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
-                                    $copado('[id="fs2append"]').append(
-                                        '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
-                                            (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                                ? 'background-color: #f4f7fa !important;'
-                                                : 'background-color: #FFF !important;') +
-                                            '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
-                                            bundleSource[1][i] +
-                                            '</span></h2></div>' +
-                                            (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                                ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
-                                                bundleSource[1][i] +
-                                                '\');"><input id="autoResolveButton-' +
-                                                i +
-                                                '" name="radio-' +
-                                                i +
-                                                '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
-                                                i +
-                                                '"><span class="slds-radio_faux" >' +
-                                                viewDifferences +
-                                                '</span></label></span></div> </div></div>'
-                                                : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
-                                                bundleSource[1][i] +
-                                                '\');">' +
-                                                viewFile +
-                                                '</a>') +
-                                            '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
-                                    );
-                                }
-                            }
-                            returnFlag = true;
-                        }
-                    }
-                    preFlag = true;
-                }
-                
-                if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
-                    
-                    if(attConflictPathName){
-                        config.attachName = attConflictPathName;
-                    }else{
-                        config.attachName = !preFlag ? attach.Name : preSource[0] > preTarget[0] ? preSource[1] : preTarget[1];
-                    }
-                    config.hasError = false;
-                    config.alreadyChecked = true;
-                    $copado('#toLineDiv,.CodeMirror-simplescroll,.CodeMirror-merge-2pane,.CodeMirror-merge-3pane,#infoOnMerge').remove();
-
-                    if (sPane) panes = sPane;
-
-                    var offsetAmount = 120;
-                    attachmentInfo = !preFlag
-                        ? attach.Name.replace('AUTO ', '')
-                            .replace('RESOLVED ', '')
-                            .split(' ')
-                        : config.attachName.split('/');
-                    
-                    //correction for the types which's label and name are not the same hence there might be empty spaces in the label exp:custom object, field, layout etc.
-                    if (attachmentInfo.length > 2 && !preFlag) {
-                        tempAttachments = attachmentInfo;
-                        attachmentInfo = [];
-                        attachmentInfo.push(tempAttachments[0]);
-                        attachmentInfo.push(tempAttachments.slice(1).join(' '));
-                    }
-
-                    pMode = defineMode();
-                    usName = attachmentInfo[0];
-
-                    $copado('.slds-modal__header:last').append('<center><span id="infoOnMerge"><strong style="font-size: medium;">'+attachmentInfo[1]+'</strong> ');
-                    var fileName = preSource && preSource.length ? (preSource[0] > preTarget[0] ? preSource[1] : preTarget[1]) : '';
-                    $copado('.files-to-compare').text(preSource && preSource.length > 0 ? fileName : attachmentInfo[1]);
-                    
-                    if (panes != 1) {
-                        if (
-                            pMode.toLowerCase().indexOf('xml') > -1 &&
-                            (!parseOperations.parseErrorExist(attach ? prapareValue(Base64.decode(attach.Body), format) : preSource[0]) || format)
-                        ) {
-                            $copado('#xmlJson').css('display', '');
-                            format = currentMode;
-                            offsetAmount = 30;
-                        } else {
-                            currentMode = 'xml';
-                            $copado('#xmlJson').css('display', 'none');
-                        }
-
-                        isConflictFile = usName.split('.')[1] == 'conflict';
-                        directValue = false;
-                        $copado('#view').css('display', '');
-                        $copado('.CodeMirror-simplescroll').css('display', 'none');
-                        
-                        var value = attach ? prapareValue(Base64.decode(attach.Body.asByteArray), format) : prapareValue(preSource[0], format);
-                        var orig1 = attach ? prepareOrig(Base64.decode(attach.Body.asByteArray), format) : prapareValue(preTarget[0], format);
-                        self.featureValue = orig1;
-
-                        let att2Resolve = {};
-                            att2Resolve.Id = attach.Id;
-                            att2Resolve.Body = self.featureValue;
-                            att2Resolve.oldName = attach.Name;
-                            att2Resolve.Name = attach.Name;
-                        self.attList.push(att2Resolve);
-
-                        editor = CodeMirror.MergeView(document.getElementById('view'), {
-                            value: value,
-                            origLeft: panes == 3 ? value : null,
-                            orig: orig1,
-                            lineNumbers: true,
-                            mode: format == 'json' ? 'application/json' : pMode,
-                            highlightDifferences: true,
-                            connect: 'align',
-                            collapseIdentical: true,
-                            readOnly: attach ? false : true,
-                            lineWrapping: true,
-                            extraKeys: {
-                                'Ctrl-Q': function(cm) {
-                                    cm.foldCode(cm.getCursor());
-                                }
-                            },
-                            foldGutter: true,
-                            gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter']
-                        });
-
-                        $copado('.CodeMirror-merge-editor').prepend(
-                            '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + resolutionToolTip + '</span></div></div></div><span>' +
-                            (attach ? resolution +
-                                '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
-                                '</center></div>' : source + jqxdatatable_config.data.orgName)
-                        );
-                        $copado('.CodeMirror-merge-pane-rightmost').prepend(
-                            '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + featureToolTip + '</span></div></div></div><span>' +
-                            (attach ? featureBranch +
-                                '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
-                                '</center></div>' : target + jqxdatatable_config.data.targetOrgName)
-                        );
-                        if ($copado('.CodeMirror-merge-left').length > 0) {
-                            $copado('.CodeMirror-merge-left').prepend(
-                                '<div class="panel top" style="background-color:white;"><center><div id="promotionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+promotionToolTip+'</span></div></div></div><span>' + promotionBranch + '</span>'+
-                                '<div onmouseenter="$copado(\'#promotionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#promotionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
-                                '</center></div>'
-                            );
-                        }
-
-                        var gapSize =
-                            parseInt(
-                                $copado('.CodeMirror-merge-gap')
-                                    .css('height')
-                                    .slice(0, -2)
-                            ) + 19;
-                        $copado('.CodeMirror-merge-gap').css('height', gapSize);
-                    } else {
-                        currentMode = 'xml';
-                        $copado('#xmlJson').css('display', 'none');
-
-                        CodeMirror.defineMode('highlightSearch', function(config, parserConfig) {
-                            var searchOverlay = {
-                                token: function(stream, state) {
-                                    if (stream.match(keyword)) {
-                                        return 'highlightSearch';
-                                    }
-                                    while (stream.next() != null && !stream.match(keyword, false)) {}
-                                    return null;
-                                }
-                            };
-                            return CodeMirror.overlayMode(CodeMirror.getMode(config, parserConfig.backdrop || pMode), searchOverlay);
-                        });
-                        initEditor2();
-                        directValue = true;
-                        $copado('#view').css('display', 'none');
-                        $copado('.CodeMirror-simplescroll').css('display', '');
-
-                        editor2.focus();
-                        editor2.setValue(Base64.decode(attach.Body));
-                    }
-                    $copado('#errorMessage').text('');
-                    modalOperations.toogleLocker(false);
-                    if(!cb){	
-                        modalOperations.showFileModal();	
-                    }
-                }
-                cb && cb(config.attachName);
+        },
+        renderBundleView = function(bundleTarget, isSrcTgtEqual, viewDifferences, viewFile, i) {
+            if(bundleTarget[1][i].includes('package.xml') == false) {
+                /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
+                $copado('[id="fs2append"]').append(
+                    '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
+                (isSrcTgtEqual
+                            ? 'background-color: #f4f7fa !important;'
+                            : 'background-color: #FFF !important;') +
+                        '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
+                        bundleTarget[1][i]+
+                        '</span></h2></div>' +
+                        (isSrcTgtEqual
+                            ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
+                            bundleTarget[1][i] +
+                            '\');"><input id="autoResolveButton-' +
+                            i +
+                            '" name="radio-' +
+                            i +
+                            '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
+                            i +
+                            '"><span class="slds-radio_faux" >' +
+                            viewDifferences +
+                            '</span></label></span></div> </div></div>'
+                            : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
+                            bundleTarget[1][i] +
+                            '\');">' +
+                            viewFile +
+                            '</a>') +
+                        '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
+                );
             }
-        }
-    }
-    self.classSetValue = function(elem) {
-        var index = $copado(elem).attr('panel');
-        resolutionToolTip = index === '3' ? resolutionToolTip3panel : resolutionToolTip2panel;
-        jsCookies.set('merge.conflict.selection', index);
-        $copado('#grp>.slds-button_brand').removeClass('slds-button_brand');
-        $copado(elem).addClass('slds-button_brand');
-        self.setPreValue(index);
-    };
-    var unzip_Decode = function(elem) {
-            zip = new JSZip(elem, { base64: true });
-            return [zip, Object.keys(zip.files)];
+        },
+        targetModalDiff = function(source, bundleTarget, size, bundleSource) {
+            let src;
+            let tgt;
+
+            for (let i = 0; i < size; i++) {
+                if(bundleSource != '' && bundleTarget != '') {
+                    getUnzippedContent(bundleSource[0].file(bundleSource[1][i])).then(function (source) {
+                        src = source ? source : '';
+                        if(bundleTarget[1][i] && bundleTarget[1][i] != 'package.xml') {
+                            getUnzippedContent(bundleTarget[0].file(bundleTarget[1][i])).then(function (target) {
+                                tgt = target ? target : '';
+                                let isSrcTgtEqual = (src != tgt) ? true : false;
+                                renderBundleView(bundleTarget, isSrcTgtEqual, viewDifferences, viewFile, i);
+                                
+                            });
+                        }
+                    });
+                }
+                else if(bundleSource == '' && bundleTarget != '') {
+                    getUnzippedContent(bundleTarget[0].file(bundleTarget[1][i])).then(function (target) {
+                        tgt = target ? target : '';
+                        let isSrcTgtEqual = (src != tgt) ? true : false;
+                        renderBundleView(bundleTarget, isSrcTgtEqual, viewDifferences, viewFile, i);
+                        
+                    });
+                }
+                else if(src != '' && tgt == '') {
+                    getUnzippedContent(bundleSource[0].file(bundleSource[1][i])).then(function (source) {
+                        src = source ? source : '';
+                        let isSrcTgtEqual = (src != tgt) ? true : false;
+                        renderBundleView(bundleTarget, isSrcTgtEqual, viewDifferences, viewFile, i);
+                    });
+                }
+                else {
+                    // both are null
+                }
+            }
+        },
+        modalDiff = function(bundleFlag, cb, bundleSource, bundleTarget) {
+            
+            bundleFlag = true;
+            if(!cb){	
+                modalOperations.showFileModal();	
+            }
+            modalOperations.showFileModal();
+            $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
+            let size = bundleSource[1] ? bundleSource[1].length : bundleTarget[1] ? bundleTarget[1].length : 0;
+                if (bundleSource[1] !== undefined && bundleSource[1] !== '') {
+                    targetModalDiff(source, bundleTarget, size, sourceCONTENT);
+                }
+                else if(bundleTarget[1] !== '') {
+                    targetModalDiff(source, bundleTarget, size, bundleSource);
+                }
+            returnFlag = true;
+        },
+        modalDiff_DEPRECATE = function(bundleFlag, cb, bundleSource, bundleTarget) {
+            bundleFlag = true;
+            if(!cb){	
+                modalOperations.showFileModal();	
+            }
+            modalOperations.showFileModal();
+            $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
+            let size = bundleSource[1] ? bundleSource[1].length : bundleTarget[1] ? bundleTarget[1].length : 0;
+            for (var i = 0; i < size; i++) {
+                if (bundleSource[1] !== '' && bundleSource[1][i].toLowerCase() != 'package.xml') {
+                    getUnzippedContent(bundleSource[0].file(bundleSource[1][i])).then(function (source) {
+                        targetModalDiff(source, bundleTarget, i);
+                    });
+                }
+                else if(bundleTarget[1] !== '' && bundleTarget[1][i].toLowerCase() != 'package.xml') {
+                    targetModalDiff(source, bundleTarget, i, bundleSource);
+                }
+            }
+            returnFlag = true;
         },
         defineMode = function() {
             var aType;
             var metadataAPIName = config.ns+'Metadata_API_Name__c';
             if(attachmentInfo[0].includes('.conflict')) {
-                aType = attachmentInfo[0].split('_')[0] != undefined ? getMetadataType(attachmentInfo[0].split('_')[0]).get(metadataAPIName).split('.')[0].toLowerCase() : '';
+                let temp = attachmentInfo[0].lastIndexOf("_");
+                aType = attachmentInfo[0].substr(0,temp) != undefined ? getMetadataType(attachmentInfo[0].substr(0,temp)).get(metadataAPIName).split('.')[0].toLowerCase() : '';
             }
             else{
                 //last clause(after : ) used to be (attachmentInfo.length > 1 ? attachmentInfo[1].split('.')[0].toLowerCase() : attachmentInfo[0])
@@ -753,18 +874,71 @@ var conversionFunc = conversionFunc || {},
 
         return false;
     };
+    
     self.renderBundleSelection = function(optionName) {
-        preSource[0] = bundleSource[0].file(optionName).asText();
-        preTarget[1] = preSource[1] = optionName;
-        preTarget[0] = bundleTarget[0].file(optionName).asText();
+        if(sourceCONTENT != '' && targetCONTENT != '') {
+            if(window.sourceCONTENT[0].file(optionName) == null) {
+                preSource[0] = '';
+                preTarget[1] = preSource[1] = optionName;
+                    getUnzippedContent(window.targetCONTENT[0].file(optionName)).then(function (contentTgt) {
+                        preTarget[0] = contentTgt ? contentTgt : '';
+                        returnFlag = false;
+                        $copado('#fs2append').css('display', 'none');
+                        $copado('#closeFileModalbtn').css('display', 'none');
+                        $copado('#xmlJson').css('display', 'inline-flex');
+                        $copado('#backBtn4bundle').css('display', '');
+                        $copado('#view').css('visibility', '');
+                        panelFunctions.setPreValue();
+                    });
+            } else {
+                getUnzippedContent(window.sourceCONTENT[0].file(optionName)).then(function (contentSrc) {
+                    preSource[0] = contentSrc ? contentSrc : '';
+                    preTarget[1] = preSource[1] = optionName;
+                    getUnzippedContent(window.targetCONTENT[0].file(optionName)).then(function (contentTgt) {
+                        preTarget[0] = contentTgt ? contentTgt : '';
+                        returnFlag = false;
+                        $copado('#fs2append').css('display', 'none');
+                        $copado('#closeFileModalbtn').css('display', 'none');
+                        $copado('#xmlJson').css('display', 'inline-flex');
+                        $copado('#backBtn4bundle').css('display', '');
+                        $copado('#view').css('visibility', '');
+                        panelFunctions.setPreValue();
+                    });
+                });
+            }
+            
+        } else if(sourceCONTENT == '' && targetCONTENT != '') {
+            preSource[0] = '';
+            preTarget[1] = preSource[1] = optionName;
+            getUnzippedContent(window.targetCONTENT[0].file(optionName)).then(function (contentTgt) {
+                preTarget[0] = contentTgt ? contentTgt : '';
+                returnFlag = false;
+                $copado('#fs2append').css('display', 'none');
+                $copado('#closeFileModalbtn').css('display', 'none');
+                $copado('#xmlJson').css('display', 'inline-flex');
+                $copado('#backBtn4bundle').css('display', '');
+                $copado('#view').css('visibility', '');
+                panelFunctions.setPreValue();
+            });
+        } else if(sourceCONTENT != '' && targetCONTENT == '') {
+            getUnzippedContent(window.sourceCONTENT[0].file(optionName)).then(function (contentSrc) {
+                preSource[0] = contentSrc ? contentSrc : '';
+                preTarget[1] = preSource[1] = optionName;
 
-        returnFlag = false;
-        $copado('#fs2append').css('display', 'none');
-        $copado('#closeFileModalbtn').css('display', 'none');
-        $copado('#xmlJson').css('display', 'inline-flex');
-        $copado('#backBtn4bundle').css('display', '');
-        $copado('#view').css('visibility', '');
-        panelFunctions.setPreValue();
+                preTarget[0] = '';
+                returnFlag = false;
+                $copado('#fs2append').css('display', 'none');
+                $copado('#closeFileModalbtn').css('display', 'none');
+                $copado('#xmlJson').css('display', 'inline-flex');
+                $copado('#backBtn4bundle').css('display', '');
+                $copado('#view').css('visibility', '');
+                panelFunctions.setPreValue();
+                
+            });
+        } else {
+            // both are blank
+        }
+        
     };
     self.backButtonOperation = function() {
         $copado('#xmlJson').css('display', 'none');

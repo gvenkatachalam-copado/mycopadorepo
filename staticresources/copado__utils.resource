@@ -78,8 +78,36 @@ dw.u = {
     conf: {
         retryLimit: 300,
         retryUISelector: '#retry-label',
+        //below fields are all either not needed system fields or already in place our fields
+        //the values of the following variables must match the one returns from backend as a respond(SF system fields and our fields), and changes will change the grid columns
         fields2prevent: '==SetupOwnerId==, ==s==, ==Name==, ==type==, ==LastModifiedDate==, ==SystemModstamp==, ==IsDeleted==, ==CreatedById==, ==CreatedDate==, ==Id==, ==LastModifiedById=='
     }
+};
+
+//method sets grid column datatype attribute for customSetting component and deploymentJS.
+dw.u.prepareGridColumn = function(objColumns, res) {
+    let fieldsPrevented = dw.u.conf.fields2prevent.split(',').map(s => s.trim().slice(2).slice(0,-2));
+    let fieldsNeeded = objColumns.filter(val => !fieldsPrevented.includes(val));
+    //2D array of rows and columns for each custom setting record with their respective field's value per record
+    let arr = res.map(s => fieldsNeeded.map(x => s[x]));
+    //fixed length array with immutable size with mutable values.
+    let fieldDataType = new Array(fieldsNeeded.length);
+    if(Object.seal) {
+        fieldDataType.fill(undefined);
+        Object.seal(fieldDataType);
+    }
+    fieldDataType = fieldsNeeded;
+    arr.map( function( row ) {
+        return row.map( function( cell ) { 
+            if(cell === '') {
+                fieldDataType[row.indexOf(cell)] = fieldDataType[row.indexOf(cell)].split('-')[0]+'-false-final';
+            }
+            if(fieldDataType[row.indexOf(cell)].indexOf('final') == -1){
+                fieldDataType[row.indexOf(cell)] = ((cell === 'true') || (cell === 'false')) ? fieldDataType[row.indexOf(cell)].split('-')[0]+'-true' : fieldDataType[row.indexOf(cell)].split('-')[0]+'-false';
+            }
+        });
+    });
+    return fieldDataType;
 };
 
 dw.u.retry = function(url, cb, postData, avoidRetry, onError) {
@@ -262,7 +290,6 @@ dw.u.upsertFile = function(parentId, filename, data) {
     cv.Title=filename;
     cv.PathOnClient= filename+'.json';
     cv.VersionData= Base64.encode(data);
-
     var existingFile = dw.u.getFile(parentId, filename);
     if (existingFile && existingFile[0]) {
         //cv.ContentDocumentId = getContentDocuments(parentId)[0].ContentDocumentId;
@@ -393,7 +420,7 @@ function getContentDocuments(parentId) {
 }
 
 function getContentVersion(documentIds, fileName) {
-    var query = "SELECT VersionData,ContentDocumentId FROM ContentVersion WHERE PathOnClient = '" + htmlEntities(fileName).replace(/'/g, "\\'") + "' AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true ORDER BY LastModifiedDate DESC LIMIT 1";
+    var query = "SELECT VersionData,ContentDocumentId FROM ContentVersion WHERE PathOnClient IN ('" + htmlEntities(fileName).replace(/'/g, "\\'") + "', '" + htmlEntities(fileName+'.json').replace(/'/g, "\\'") + "') AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true ORDER BY LastModifiedDate DESC LIMIT 1";
     var versions = sforce.connection.query(query);
     return versions.getArray("records");
 }
@@ -766,6 +793,7 @@ var coGridHelper = {
             len = data.length;
 
         coGridHelper._selectedNames = [];
+        coGridHelper._retrieveOnlyNames = [];
 
         while (len--) {
             var o = {
@@ -781,6 +809,12 @@ var coGridHelper = {
                 f: data[len].f
             };
 
+            if (typeof data[len].ns != 'undefined') {
+                o.ns = data[len].ns;
+            } else {
+                o.t = data[len].t;
+            }
+
             if (typeof data[len].r !== 'undefined') {
                 o.r = data[len].r;
             } else {
@@ -788,18 +822,21 @@ var coGridHelper = {
                 //should never be undefined in the attachment that we create for backend to use
                 o.r = false;
             }
-
-            if (typeof data[len].ns != 'undefined') {
-                o.ns = data[len].ns;
-            } else {
-                o.t = data[len].t;
+            // add for vlocity rollback items.
+            // added typeof check to keep it aligned with above checks but also added if it is null/undefined
+            if (isRollback && (typeof data[len].vk !== 'undefined' || data[len].vk)) { 
+                o.v = true;
             }
-
-            data[len].s && coGridHelper._selectedNames.push(o);
+           if(o.r == true) {
+               data[len].s && coGridHelper._retrieveOnlyNames.push(o);
+            }
+                data[len].s && coGridHelper._selectedNames.push(o);
         }
         return coGridHelper._selectedNames;
     },
 
+    // retrieve only names
+    _retrieveOnlyNames: [],
     //selected "Names"
     _selectedNames: [],
 
@@ -839,12 +876,13 @@ var coGridHelper = {
      * @param  {[type]} callcack
      * @return {[type]}                      false
      */
-    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel, isRollback) {
+    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel, isRollback, attachmentSize) {
         console.debug('... Saving Attachment');
         var me = coGridHelper;
         //validations
         //check global selected items
         me.getSelectedObj();
+        
         if (!allowEmpty && !me._selectedNames.length) {
             //check if copadoApp showmessage is active
             if (copadoApp.showMessage) {
@@ -855,11 +893,29 @@ var coGridHelper = {
             return false;
         }
         var valid = !additionalValidation ? true : additionalValidation(me._selectedNames);
-        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback, isRollback);
-
+        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback, isRollback, attachmentSize);
         return false;
     },
 
+     /**
+     * Save in attachment the selected items of the grid
+     * @param  {[type]} id                   parentId
+     * @param  {[type]} type                 Attachment Name
+     * @param  {[type]} additionalValidation function for additional validations
+     * @param  {[type]} allowEmpty           skip length validation
+     * @param  {[type]} callcack
+     * @return {[type]}                      false
+     */
+      saveRetrieveOnly: function( id, type, additionalValidation, callback, ret, isRollback, attachmentSize) {
+        console.debug('... Saving RetrieveOnly Attachment');
+        var me = coGridHelper;
+        //validations
+        //check global selected items
+        //me.getSelectedObj();
+        var valid = !additionalValidation ? true : additionalValidation(me._retrieveOnlyNames);
+        valid && me.remoteSaveMeta(id, ret || me._retrieveOnlyNames, type, callback, isRollback, attachmentSize);
+        return false;
+    },
     /**
      * save an attachment
      * @param  {[type]} id       parentId
@@ -869,26 +925,38 @@ var coGridHelper = {
      * @return {[type]}          void
      */
     // write
-    remoteSaveMeta: function(id, items, type, callback, isRollback) {
+    remoteSaveMeta: function(id, items, type, callback, isRollback, attachmentSize) {
         if (isRollback) {
             if (type === 'Selected items to rollback') {
-                var deletedItems=[];
-                var createdUpdatedItems=[];
-                items.forEach((item) => {
-                    if(item.a === 'create'){
-                        deletedItems.push(item);
+                //we need to support both scenarios when only one single step is created for promotion and deletion. 
+                //So if the attachment size is more than 1 it is supporting old version of backend
+                if(attachmentSize && attachmentSize == 2) {
+                    let deletedItems=[];
+                    let createdUpdatedItems=[];
+                    items.forEach((item) => {
+                        if(item.a === 'create'){
+                            deletedItems.push(item);
+                        }
+                        else{
+                            createdUpdatedItems.push(item);
+                        }
+                    });
+                    if (createdUpdatedItems.length) {
+                        dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                     }
-                    else{
+                    if (deletedItems.length) {
+                        dw.u.upsertFile(id, type+'_Delete Metadata', JSON.stringify(deletedItems));
+                    }
+                } else {
+                    let createdUpdatedItems=[];
+                    items.forEach((item) => {
                         createdUpdatedItems.push(item);
+                    });
+                    if (createdUpdatedItems.length) {
+                        dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                     }
-                });
-                if (createdUpdatedItems.length) {
-                    dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
                 }
-
-                if (deletedItems.length) {
-                    dw.u.upsertFile(id, type+'_Delete Metadata', JSON.stringify(deletedItems));
-                }
+                
             }
             else {
                 dw.u.upsertFile(id, type, JSON.stringify(items));

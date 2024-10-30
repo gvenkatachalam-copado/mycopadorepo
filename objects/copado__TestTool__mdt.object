@@ -4,7 +4,6 @@
         <fullName>copado__Automate_Test_Readiness__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <inlineHelpText>If ticked, test records created in the Test object or as a quality gate are automatically marked as Ready to Run. No manual configuration is required before their execution.</inlineHelpText>
         <label>Automate Test Readiness</label>
@@ -39,6 +38,18 @@
         <fieldManageability>DeveloperControlled</fieldManageability>
         <inlineHelpText>API Name of the apex class that validates if the test configuration is complete and ready to run. This validation is triggered when a user tries to mark the test as Ready to Run. If the validation fails, the test cannot be marked as Ready To Run until the user completes the missing configuration. The apex class must inherit the interface with name “TestReadinessInterface”.</inlineHelpText>
         <label>Test Readiness Logic</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__UserStoryBundleTestsUnifierLogic__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>API Name of the apex class that unifies all the tests record related to user stories that are bundled. The apex class must extend the class with name “UserStoryBundleTestsUnifier”.</inlineHelpText>
+        <label>User Story Bundle Tests Unifier Logic</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
