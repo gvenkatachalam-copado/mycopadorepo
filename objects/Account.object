@@ -284,6 +284,14 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Copado_Admin_License__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Copado Admin License</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>CustomerPriority__c</fullName>
         <label>Customer Priority</label>
         <required>false</required>
@@ -345,6 +353,14 @@
         <fullName>IsPartner</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Is_Copado_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Is Copado User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Jigsaw</fullName>
