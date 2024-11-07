@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Copado_Admin_License__c</members>
-        <members>Account.Is_Copado_User__c</members>
+        <members>Account.Account_Task_Description__c</members>
+        <members>Account.Account_Translation__c</members>
+        <members>Account.Test_package_XML__c</members>
         <name>CustomField</name>
     </types>
     <version>62.0</version>
