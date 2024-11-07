@@ -240,11 +240,27 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Account_Translation__c</fullName>
+        <fullName>Account_Task_Description__c</fullName>
+        <description>Testing the field not in the package.xml error issue</description>
         <externalId>false</externalId>
-        <inlineHelpText>It is used for the account translation testing feature</inlineHelpText>
+        <inlineHelpText>Testing the field not in the package.xml error issue
+heloo how are your...</inlineHelpText>
+        <label>Account Task Description</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Translation__c</fullName>
+        <description>Account translation testing for the field not in package.xml error</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is used for the account translation testing feature
+Account translation testing for the field not in package.xml error</inlineHelpText>
         <label>Account Translation</label>
-        <length>50</length>
+        <length>60</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -501,6 +517,15 @@
         <fullName>Site</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Test_package_XML__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>testing for the field not in package.xml error</description>
+        <label>Test package XML?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>TickerSymbol</fullName>
