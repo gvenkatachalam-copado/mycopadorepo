@@ -9,13 +9,5 @@
         <members>New_Contact</members>
         <name>Flow</name>
     </types>
-    <types>
-        <members>New_Contact</members>
-        <name>FlowDefinition</name>
-    </types>
-    <types>
-        <members>New_Contact</members>
-        <name>WorkflowFlowAutomation</name>
-    </types>
     <version>62.0</version>
 </Package>
