@@ -240,6 +240,29 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Account_Contact_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Contact Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Flow__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Flow</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Account_Task_Description__c</fullName>
         <description>Testing the field not in the package.xml error issue</description>
         <externalId>false</externalId>
