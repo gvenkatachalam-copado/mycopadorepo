@@ -5,9 +5,5 @@
         <members>test_routing_config_queue_2</members>
         <name>Queue</name>
     </types>
-    <types>
-        <members>My_Queue_Route</members>
-        <name>QueueRoutingConfig</name>
-    </types>
     <version>62.0</version>
 </Package>
