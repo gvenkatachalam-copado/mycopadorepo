@@ -6,4 +6,13 @@
         <label>Is pre manual tas?</label>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>Pre_manual_task_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre manual task description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
 </CustomObject>
