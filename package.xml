@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>test_routing_config_queue_1</members>
-        <members>test_routing_config_queue_2</members>
-        <name>Queue</name>
-    </types>
-    <types>
-        <members>My_Queue_Route</members>
-        <name>QueueRoutingConfig</name>
+        <members>AgentWork.Is_pre_manual_tas__c</members>
+        <name>CustomField</name>
     </types>
     <version>62.0</version>
 </Package>
