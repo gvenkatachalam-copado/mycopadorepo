@@ -8,5 +8,6 @@
     <label>Queue Management</label>
     <navType>Standard</navType>
     <tabs>standard-Location</tabs>
+    <tabs>Sales_Rep__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

@@ -123,6 +123,12 @@
         <fullName>AuditEmail</fullName>
     </fields>
     <fields>
+        <fullName>BankAccountHolderType</fullName>
+    </fields>
+    <fields>
+        <fullName>BankAccountType</fullName>
+    </fields>
+    <fields>
         <fullName>BillingFirstName</fullName>
     </fields>
     <fields>
@@ -182,12 +188,10 @@
         <fullName>ProcessingMode</fullName>
     </fields>
     <fields>
+        <fullName>StandardEntryClassCode</fullName>
+    </fields>
+    <fields>
         <fullName>Status</fullName>
     </fields>
-    <listViews>
-        <fullName>AlternativePaymentMethod</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <sharingModel>Private</sharingModel>
 </CustomObject>

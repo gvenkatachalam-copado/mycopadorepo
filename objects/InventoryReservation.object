@@ -154,5 +154,5 @@
         <fullName>ReservationSourceId</fullName>
         <type>Lookup</type>
     </fields>
-    <sharingModel>ControlledByLeadOrContact</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
