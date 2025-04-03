@@ -20,4 +20,5 @@
     <tabs>standard-Product2</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Sales_Rep__c</tabs>
 </CustomApplication>

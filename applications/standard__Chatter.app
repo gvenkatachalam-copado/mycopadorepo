@@ -11,4 +11,5 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>Sales_Rep__c</tabs>
 </CustomApplication>

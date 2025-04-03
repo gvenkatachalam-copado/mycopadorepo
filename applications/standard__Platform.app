@@ -10,4 +10,5 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Sales_Rep__c</tabs>
 </CustomApplication>
