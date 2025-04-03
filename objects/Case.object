@@ -197,34 +197,6 @@
         <type>Default</type>
     </actionOverrides>
     <businessProcesses>
-        <fullName>Copado Business process</fullName>
-        <isActive>true</isActive>
-        <values>
-            <fullName>Closed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Escalated</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New Service</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>Waiting on Project</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Working</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
-    <businessProcesses>
         <fullName>Service</fullName>
         <isActive>true</isActive>
         <values>
