@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyDomainSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areLegacyRedirectsMaintained>false</areLegacyRedirectsMaintained>
     <canOnlyLoginWithMyDomainUrl>false</canOnlyLoginWithMyDomainUrl>
     <doesApiLoginRequireOrgDomain>false</doesApiLoginRequireOrgDomain>
     <doesWarnOnForceComRedirect>false</doesWarnOnForceComRedirect>
     <doesWarnOnRedirect>false</doesWarnOnRedirect>
-    <domainPartition>none</domainPartition>
+    <domainPartition>sandbox</domainPartition>
     <enableCrossDomainPreviewCookies>true</enableCrossDomainPreviewCookies>
     <enableEdgeDuringRollout>true</enableEdgeDuringRollout>
     <enableExtendedRedirections>false</enableExtendedRedirections>
@@ -16,8 +17,9 @@
     <instancedUrlRedirectHandling>NoRedirect</instancedUrlRedirectHandling>
     <isFirstPartyCookieUseRequired>false</isFirstPartyCookieUseRequired>
     <logRedirections>false</logRedirections>
-    <myDomainName>d2w00000ce1uueaj-dev-ed</myDomainName>
+    <myDomainName>copado51</myDomainName>
     <myDomainSuffix>MySalesforce</myDomainSuffix>
+    <onboardCustomerSpecificSuffix>false</onboardCustomerSpecificSuffix>
     <redirectForceComSiteUrls>true</redirectForceComSiteUrls>
     <redirectPriorMyDomain>true</redirectPriorMyDomain>
     <use3rdPartyCookieBlockingCompatibleHostnames>true</use3rdPartyCookieBlockingCompatibleHostnames>

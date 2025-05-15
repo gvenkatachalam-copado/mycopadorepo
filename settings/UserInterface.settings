@@ -20,4 +20,6 @@
     <enableRelatedListHovers>true</enableRelatedListHovers>
     <enableTabOrganizer>true</enableTabOrganizer>
     <multiColumnSort>false</multiColumnSort>
+    <multiColumnSortLv>true</multiColumnSortLv>
+    <multiColumnSortRl>true</multiColumnSortRl>
 </UserInterfaceSettings>

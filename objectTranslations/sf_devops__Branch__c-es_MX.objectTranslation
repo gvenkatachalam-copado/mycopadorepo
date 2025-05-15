@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Bifurcación --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Bifurcaciones --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Ignore Rules --></label>
+        <name>sf_devops__Ignore_Rules__c</name>
+    </fields>
+    <fields>
+        <help>El nombre de la bifurcación.</help>
+        <label><!-- Name --></label>
+        <name>sf_devops__Name__c</name>
+    </fields>
+    <fields>
+        <help>La referencia remota de la bifurcación de origen desde la que se creó nuestra bifurcación.</help>
+        <label><!-- Parent Remote Reference --></label>
+        <name>sf_devops__Parent_Remote_Reference__c</name>
+    </fields>
+    <fields>
+        <help>Tiene que aplicarse .forceignore a los cambios visibles.</help>
+        <label><!-- Recompute Visible Changes --></label>
+        <name>sf_devops__Recompute_Visible_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remote Reference Date --></label>
+        <name>sf_devops__Remote_Reference_Date__c</name>
+    </fields>
+    <fields>
+        <help>La última referencia remota en nuestra bifurcación.</help>
+        <label><!-- Remote Reference --></label>
+        <name>sf_devops__Remote_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repository --></label>
+        <name>sf_devops__Repository__c</name>
+        <relationshipLabel><!-- Branches --></relationshipLabel>
+    </fields>
+    
+    <nameFieldLabel><!-- Name --></nameFieldLabel>
+</CustomObjectTranslation>

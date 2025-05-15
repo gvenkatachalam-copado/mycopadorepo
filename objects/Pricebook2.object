@@ -146,7 +146,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <listViews>
-        <fullName>All_Pricebooks</fullName>
+        <fullName>All_Price_Books</fullName>
+        <columns>PRICEBOOK2.NAME</columns>
+        <columns>PRICEBOOK2.DESCRIPTION</columns>
+        <columns>PRICEBOOK2.LAST_UPDATE</columns>
+        <columns>PRICEBOOK2.IS_ACTIVE</columns>
         <filterScope>Everything</filterScope>
         <label>All Price Books</label>
     </listViews>

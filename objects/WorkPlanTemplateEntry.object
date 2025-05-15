@@ -159,6 +159,7 @@
         <lookupPhoneDialogsAdditionalFields>ExecutionOrder</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>WorkPlanTemplate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>WorkStepTemplate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ExecutionOrder</searchResultsAdditionalFields>

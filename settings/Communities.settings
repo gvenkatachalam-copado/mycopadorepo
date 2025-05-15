@@ -3,9 +3,8 @@
     <applyLoginPageTypeToEmbeddedLogin>false</applyLoginPageTypeToEmbeddedLogin>
     <blockEmbeddedLoginUnknownURLRedirect>false</blockEmbeddedLoginUnknownURLRedirect>
     <enableCspContactVisibilityPref>false</enableCspContactVisibilityPref>
-    <enableEnablePRM>false</enableEnablePRM>
+    <enableExternalAccHierPref>false</enableExternalAccHierPref>
     <enableGuestPermDisOptOutCruc>false</enableGuestPermDisOptOutCruc>
-    <enableGuestRecordReassignOrgPref>false</enableGuestRecordReassignOrgPref>
     <enableGuestSecurityOptOutCruc>false</enableGuestSecurityOptOutCruc>
     <enableInviteChatterGuestEnabled>true</enableInviteChatterGuestEnabled>
     <enableNetworksEnabled>false</enableNetworksEnabled>

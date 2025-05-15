@@ -157,6 +157,7 @@
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>Asset</customTabListAdditionalFields>
         <customTabListAdditionalFields>RelatedAsset</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Asset</searchResultsAdditionalFields>

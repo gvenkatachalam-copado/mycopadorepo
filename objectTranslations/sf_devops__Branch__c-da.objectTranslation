@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value><!-- Forgrening --></value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value><!-- Forgrening --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- Forgreningen --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value><!-- Forgreninger --></value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value><!-- Forgreninger --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- Forgreningerne --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Ignore Rules --></label>
+        <name>sf_devops__Ignore_Rules__c</name>
+    </fields>
+    <fields>
+        <help>Navnet på forgrening.</help>
+        <label><!-- Name --></label>
+        <name>sf_devops__Name__c</name>
+    </fields>
+    <fields>
+        <help>Den fjernreference på kildeforgreningen, som forgreningen oprettes fra.</help>
+        <label><!-- Parent Remote Reference --></label>
+        <name>sf_devops__Parent_Remote_Reference__c</name>
+    </fields>
+    <fields>
+        <help>.forceignore skal anvendes på synlige ændringer.</help>
+        <label><!-- Recompute Visible Changes --></label>
+        <name>sf_devops__Recompute_Visible_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remote Reference Date --></label>
+        <name>sf_devops__Remote_Reference_Date__c</name>
+    </fields>
+    <fields>
+        <help>Den seneste fjernreference på vores forgrening</help>
+        <label><!-- Remote Reference --></label>
+        <name>sf_devops__Remote_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repository --></label>
+        <name>sf_devops__Repository__c</name>
+        <relationshipLabel><!-- Branches --></relationshipLabel>
+    </fields>
+    
+    <nameFieldLabel><!-- Name --></nameFieldLabel>
+</CustomObjectTranslation>

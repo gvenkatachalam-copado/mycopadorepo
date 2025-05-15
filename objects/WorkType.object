@@ -130,41 +130,6 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>AppointmentCategoryId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>ApptStartTimeIntvlInMin</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>AttendeeLimit</fullName>
-        <inlineHelpText>Enter the maximum number of service appointment attendees that can attend a group service appointment. This field is mandatory if the appointment category is group.</inlineHelpText>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeAfterAppointment</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeAfterUnit</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeBeforeAppointment</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeBeforeUnit</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>DefaultAppointmentType</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -177,13 +142,12 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>Name</fullName>
+        <fullName>MinimumCrewSize</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>OperatingHoursId</fullName>
+        <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -191,30 +155,22 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>TimeFrameEndUnit</fullName>
+        <fullName>RecommendedCrewSize</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>TimeFrameStartUnit</fullName>
+        <fullName>ServiceReportTemplateId</fullName>
         <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>TimeframeEnd</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>TimeframeStart</fullName>
+        <fullName>ShouldAutoCreateSvcAppt</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <listViews>
         <fullName>All_WorkTypes</fullName>
         <filterScope>Everything</filterScope>
-        <label>All Work Types</label>
-    </listViews>
-    <listViews>
-        <fullName>My_WorkTypes</fullName>
-        <filterScope>Mine</filterScope>
-        <label>My Work Types</label>
+        <label>All Work Type</label>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>EstimatedDuration</customTabListAdditionalFields>
@@ -226,5 +182,5 @@
         <searchResultsAdditionalFields>EstimatedDuration</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DurationType</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

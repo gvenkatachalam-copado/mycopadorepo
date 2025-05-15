@@ -9,7 +9,7 @@
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>standard-FlowRecord</tabs>
-    <tabs>Sales_Rep__c</tabs>
+    <tabs>standard-Monitor</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>FlowsApp_UtilityBar</utilityBar>
 </CustomApplication>

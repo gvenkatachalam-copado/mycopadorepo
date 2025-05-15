@@ -171,6 +171,7 @@
         <customTabListAdditionalFields>PreferredTimeStart</customTabListAdditionalFields>
         <customTabListAdditionalFields>PreferredTimeEnd</customTabListAdditionalFields>
         <customTabListAdditionalFields>PreferredTimeZone</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Unit</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Offset</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PreferredTimeStart</searchResultsAdditionalFields>

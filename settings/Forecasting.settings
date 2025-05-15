@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ForecastingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultToPersonalCurrency>false</defaultToPersonalCurrency>
-    <enableForecasts>false</enableForecasts>
+    <enableForecasts>true</enableForecasts>
     <forecastingCategoryMappings>
         <forecastingItemCategoryApiName>commitonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
@@ -104,6 +104,8 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunities</masterLabel>
         <name>OpportunityRevenue</name>
         <opportunityListFieldsLabelMappings>
@@ -195,6 +197,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -231,24 +237,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -283,6 +285,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -292,11 +295,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -317,6 +319,8 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunities</masterLabel>
         <name>OpportunityQuantity</name>
         <opportunityListFieldsLabelMappings>
@@ -408,6 +412,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -444,24 +452,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -496,6 +500,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -505,11 +510,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -530,6 +534,8 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Product Families</masterLabel>
         <name>OpportunityLineItemRevenue</name>
         <opportunityListFieldsLabelMappings>
@@ -625,6 +631,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -661,24 +671,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -714,6 +720,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -723,11 +730,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -748,6 +754,8 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Product Families</masterLabel>
         <name>OpportunityLineItemQuantity</name>
         <opportunityListFieldsLabelMappings>
@@ -839,6 +847,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -875,24 +887,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -927,6 +935,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -936,11 +945,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -961,6 +969,8 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Revenue Product Date</masterLabel>
         <name>OpportunityRevenueProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1056,6 +1066,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1092,24 +1106,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -1145,6 +1155,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1154,11 +1165,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1179,6 +1189,8 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Quantity Product Date</masterLabel>
         <name>OpportunityQuantityProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1270,6 +1282,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1306,24 +1322,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -1358,6 +1370,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1367,11 +1380,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1392,6 +1404,8 @@
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Revenue Product Date</masterLabel>
         <name>LineItemRevenueProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1487,6 +1501,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1523,24 +1541,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -1576,6 +1590,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1585,11 +1600,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1610,6 +1624,8 @@
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Quantity Product Date</masterLabel>
         <name>LineItemQuantityProductDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1701,6 +1717,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1737,24 +1757,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -1789,6 +1805,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1798,11 +1815,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -1823,6 +1839,8 @@
         <isAmount>true</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Revenue Schedule Date</masterLabel>
         <name>OpportunityRevenueScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -1918,6 +1936,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1954,24 +1976,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -2007,6 +2025,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2016,11 +2035,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2041,6 +2059,8 @@
         <isAmount>false</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Opportunity Quantity Schedule Date</masterLabel>
         <name>OpportunityQuantityScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -2132,6 +2152,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2168,24 +2192,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -2220,6 +2240,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2229,11 +2250,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2254,6 +2274,8 @@
         <isAmount>true</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Revenue Schedule Date</masterLabel>
         <name>LineItemRevenueScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -2349,6 +2371,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2385,24 +2411,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -2438,6 +2460,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2447,11 +2470,10 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
@@ -2472,6 +2494,8 @@
         <isAmount>false</isAmount>
         <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
+        <managerAdjustableCategoryApiNames>commitonly</managerAdjustableCategoryApiNames>
+        <managerAdjustableCategoryApiNames>bestcaseonly</managerAdjustableCategoryApiNames>
         <masterLabel>Line Item Quantity Schedule Date</masterLabel>
         <name>LineItemQuantityScheduleDate</name>
         <opportunityListFieldsLabelMappings>
@@ -2563,6 +2587,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2599,24 +2627,20 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1J</field>
-            <label>Current Generator(s)</label>
+            <field>00NB000000GDzFp</field>
+            <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1K</field>
-            <label>Delivery/Installation Status</label>
+            <field>00NB000000GDzFq</field>
+            <label>Discovery Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1L</field>
-            <label>Main Competitor(s)</label>
+            <field>00NB000000GDzFs</field>
+            <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1M</field>
-            <label>Order Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N2w00000GCG1N</field>
-            <label>Tracking Number</label>
+            <field>00NB000000GDzFr</field>
+            <label>ROI Analysis Completed</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
@@ -2651,6 +2675,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2660,18 +2685,17 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000GCG1J</field>
-            <field>00N2w00000GCG1K</field>
-            <field>00N2w00000GCG1L</field>
-            <field>00N2w00000GCG1M</field>
-            <field>00N2w00000GCG1N</field>
+            <field>00NB000000GDzFp</field>
+            <field>00NB000000GDzFq</field>
+            <field>00NB000000GDzFs</field>
+            <field>00NB000000GDzFr</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <globalAdjustmentsSettings>
         <allowExpandedColumns>false</allowExpandedColumns>
-        <enableAdjustments>false</enableAdjustments>
+        <enableAdjustments>true</enableAdjustments>
         <enableOwnerAdjustments>false</enableOwnerAdjustments>
     </globalAdjustmentsSettings>
     <globalForecastRangeSettings>

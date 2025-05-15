@@ -181,11 +181,7 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
-    <tabs>Sales_Rep__c</tabs>
     <workspaceConfig>
-        <mappings>
-            <tab>Sales_Rep__c</tab>
-        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

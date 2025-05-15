@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Результат асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Результаты асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Результат асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Результаты асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Результата асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Результатов асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Результату асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Результатам асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Результатом асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Результатами асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value><!-- Результате асинхронной операции --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value><!-- Результатах асинхронной операции --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Dependent Records --></label>
+        <name>sf_devops__Dependent_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Details --></label>
+        <name>sf_devops__Error_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- In Terminal State --></label>
+        <name>sf_devops__In_Terminal_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Log Id --></label>
+        <name>sf_devops__Log_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>sf_devops__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operation --></label>
+        <name>sf_devops__Operation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remote Commands --></label>
+        <name>sf_devops__Remote_Commands__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sf_devops__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Завершено</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>Ошибка</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ignored</masterLabel>
+            <translation>Пропущено</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Выполняется</translation>
+        </picklistValues>
+    </fields>
+    
+    <nameFieldLabel><!-- Async Operation Result Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- The Operation of an Async_Operation_Result cannot be changed. --></errorMessage>
+        <name>sf_devops__Operation_No_Change</name>
+    </validationRules>
+</CustomObjectTranslation>

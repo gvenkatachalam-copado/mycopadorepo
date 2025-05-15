@@ -130,6 +130,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>AssetId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AttachedToId</fullName>
         <type>Lookup</type>
     </fields>
@@ -190,6 +194,7 @@
         <lookupPhoneDialogsAdditionalFields>Severity</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Priority</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Owner</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CreatedDate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Category</searchResultsAdditionalFields>

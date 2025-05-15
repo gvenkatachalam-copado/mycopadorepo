@@ -170,6 +170,7 @@
         <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ServiceResource</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SkillMasterLabel</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SkillLevel</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>EffectiveStartDate</searchResultsAdditionalFields>
