@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>sf_devops__DuplicateEventProcessingException</members>
+        <members>sf_devops__MissingNecessaryFieldsException</members>
         <members>sf_devops__RepositoryOpsRebasePayloadBuilderV2</members>
-        <members>sf_devops__RepositoryOpsRebasePayloadBuilderV2UTest</members>
+        <members>sf_devops__ResultHandlerHerokuFieldsValidationFTest</members>
+        <members>sf_devops__SystemService</members>
+        <members>sf_devops__SystemServiceFTest</members>
         <name>ApexClass</name>
     </types>
     <version>63.0</version>
