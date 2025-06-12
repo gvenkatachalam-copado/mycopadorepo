@@ -16,6 +16,9 @@
     <fields>
         <help><!-- The displayed values are based on the active Extension Configuration records available in your org. --></help>
         <label><!-- Tool Configuration --></label>
+        <lookupFilter>
+            <errorMessage><!-- Make sure the selected Extension Configuration is valid and active. --></errorMessage>
+        </lookupFilter>
         <name>copado__ExtensionConfiguration__c</name>
         <relationshipLabel><!-- Tests --></relationshipLabel>
     </fields>
@@ -32,6 +35,10 @@
         <label><!-- Latest Job Execution --></label>
         <name>copado__LatestJobExecution__c</name>
         <relationshipLabel><!-- Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Latest Result Status --></label>
+        <name>copado__Latest_Result_Status__c</name>
     </fields>
     <fields>
         <label><!-- Parent Id --></label>

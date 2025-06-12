@@ -270,13 +270,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>EntitlementId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>IsClosedOnCreate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -286,20 +279,6 @@
         <fullName>IsEscalated</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>IsStopped</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>MilestoneStatus</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>MilestoneStatusIcon</fullName>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -325,7 +304,6 @@
     </fields>
     <fields>
         <fullName>PotentialLiability__c</fullName>
-        <externalId>false</externalId>
         <label>Potential Liability</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -356,15 +334,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>ProductId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Product__c</fullName>
-        <externalId>false</externalId>
         <label>Product</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -431,7 +401,6 @@
     </fields>
     <fields>
         <fullName>SLAViolation__c</fullName>
-        <externalId>false</externalId>
         <label>SLA Violation</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -455,23 +424,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>ServiceContractId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>SlaExitDate</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>SlaStartDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
         <fullName>SourceId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -484,10 +436,6 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>StopStartDate</fullName>
-        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Subject</fullName>

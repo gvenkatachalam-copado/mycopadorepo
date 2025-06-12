@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Credential --></value>
+        <value>クレデンシャル</value>
     </caseValues>
     <fieldSets>
         <label><!-- Copado Header Fields --></label>
@@ -12,6 +12,12 @@
         <help>組織の最新のコンプライアンス・スキャンのステータス。</help>
         <label><!-- Compliance Status --></label>
         <name>copado__Compliance_Status__c</name>
+    </fields>
+    <fields>
+        <help>独自のコネクテッドアプリを作成し、カスタムコネクテッドアプリとコパードコネクテッドアプリで認証される各組織ククレデンシャルについて、そのコネクテッドアプリを参照するためのメカニズムになります。選択しない場合は、従来の動作となります。</help>
+        <label><!-- Custom Connected App Info --></label>
+        <name>copado__Custom_Connected_App_Info__c</name>
+        <relationshipLabel><!-- Credentials --></relationshipLabel>
     </fields>
     <fields>
         <help>例えば：https://company.my.salesforce.com</help>
@@ -113,7 +119,7 @@
         <name>copado__Org_Type__c</name>
         <picklistValues>
             <masterLabel>Production/Developer</masterLabel>
-            <translation><!-- Production/Developer --></translation>
+            <translation>プロダクション/デベロッパー</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sandbox</masterLabel>
@@ -212,7 +218,11 @@
         <label><!-- Is Developer Hub Credential --></label>
         <name>copado__is_Developer_Hub_Org__c</name>
     </fields>
-    <nameFieldLabel><!-- Credential Name --></nameFieldLabel>
+    <nameFieldLabel>クレデンシャル名</nameFieldLabel>
+    <sharingReasons>
+        <label><!-- Copado Persona --></label>
+        <name>copado__Copado_Persona</name>
+    </sharingReasons>
     <webLinks>
         <label><!-- Add_to_Deployment --></label>
         <name>copado__Add_to_Deployment</name>
