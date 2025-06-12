@@ -45,11 +45,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Sample_Field__c</field>
+                <field>Is_SFDX_Account__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Test_Ignore__c</field>
+                <field>HAP_Test_Field__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
