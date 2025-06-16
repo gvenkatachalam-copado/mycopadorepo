@@ -278,6 +278,16 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Copado_Release_Version__c</fullName>
+        <externalId>false</externalId>
+        <label>Copado Release Version</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CustomerPriority__c</fullName>
         <label>Customer Priority</label>
         <required>false</required>
