@@ -8,5 +8,9 @@
         <members>Campaign.GSI</members>
         <name>RecordType</name>
     </types>
+    <types>
+        <members>CampaignType</members>
+        <name>StandardValueSet</name>
+    </types>
     <version>64.0</version>
 </Package>
