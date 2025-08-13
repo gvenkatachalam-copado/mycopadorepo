@@ -339,6 +339,13 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Forward_Promo_Test_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Forward Promo Test 2</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>HAP_Test_Field__c</fullName>
         <externalId>false</externalId>
         <label>HAP Test Field</label>
