@@ -429,6 +429,13 @@ Account translation testing for the field not in package.xml error</inlineHelpTe
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Forward_Promo_Test1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Forward Promo Test1</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Industry</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
