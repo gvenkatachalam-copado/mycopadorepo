@@ -4,9 +4,5 @@
         <members>Case.Case email test rules</members>
         <name>AutoResponseRule</name>
     </types>
-    <types>
-        <members>Case</members>
-        <name>AutoResponseRules</name>
-    </types>
     <version>64.0</version>
 </Package>
