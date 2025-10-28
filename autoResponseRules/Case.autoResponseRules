@@ -14,8 +14,13 @@
                 <operation>equals</operation>
                 <value>Equipment Design</value>
             </criteriaItems>
-            <senderEmail>ganeshkumar12450@gmail.com</senderEmail>
-            <senderName>Email Test</senderName>
+            <criteriaItems>
+                <field>Case.Description</field>
+                <operation>contains</operation>
+                <value>Web Case Origin</value>
+            </criteriaItems>
+            <senderEmail>gvenkatachalam@copado.com</senderEmail>
+            <senderName>Email Test 12</senderName>
             <template>unfiled$public/SalesNewCustomerEmail</template>
         </ruleEntry>
     </autoResponseRule>
