@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>App_Permission_set</members>
-        <name>PermissionSet</name>
+        <members>Case.Case email test rules</members>
+        <name>AutoResponseRule</name>
     </types>
-    <version>64.0</version>
+    <types>
+        <members>Case</members>
+        <name>AutoResponseRules</name>
+    </types>
+    <types>
+        <members>Account.CCH_rule_field__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>65.0</version>
 </Package>
