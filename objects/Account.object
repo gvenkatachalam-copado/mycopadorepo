@@ -275,7 +275,7 @@
     </fields>
     <fields>
         <fullName>CCH_rule_field__c</fullName>
-        <description>To test compliance rule issue</description>
+        <description>To test compliance rule issue along with the profile commit testing story</description>
         <externalId>false</externalId>
         <label>CCH rule field</label>
         <length>25</length>
