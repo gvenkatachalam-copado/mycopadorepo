@@ -14,4 +14,12 @@
         <shortDescription>custom label 2</shortDescription>
         <value>Custom Lable 2</value>
     </labels>
+    <labels>
+        <fullName>roll_back</fullName>
+        <categories>1</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>roll back</shortDescription>
+        <value>test1</value>
+    </labels>
 </CustomLabels>
