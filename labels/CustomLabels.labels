@@ -22,4 +22,12 @@
         <shortDescription>roll back</shortDescription>
         <value>test1</value>
     </labels>
+    <labels>
+        <fullName>roll_back2</fullName>
+        <categories>2</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>roll back2</shortDescription>
+        <value>test2</value>
+    </labels>
 </CustomLabels>
