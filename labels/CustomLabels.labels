@@ -30,4 +30,12 @@
         <shortDescription>roll back2</shortDescription>
         <value>test2</value>
     </labels>
+    <labels>
+        <fullName>roll_back_3</fullName>
+        <categories>3</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>roll back 3</shortDescription>
+        <value>test3</value>
+    </labels>
 </CustomLabels>
