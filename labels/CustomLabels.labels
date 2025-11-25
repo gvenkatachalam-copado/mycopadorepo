@@ -9,6 +9,14 @@
         <value>1</value>
     </labels>
     <labels>
+        <fullName>RB02</fullName>
+        <categories>2</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RB02</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
         <fullName>Test_Label</fullName>
         <language>en_US</language>
         <protected>true</protected>
